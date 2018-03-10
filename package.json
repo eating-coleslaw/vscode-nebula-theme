@@ -1,0 +1,22 @@
+{
+    "name": "nebula-theme",
+    "displayName": "Nebula Theme",
+    "description": "Dark theme with bright colors inspired by dead stars.",
+    "version": "0.0.1",
+    "publisher": "chirtlelovesdolls",
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Nebula",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Nebula-color-theme.json"
+            }
+        ]
+    }
+}
