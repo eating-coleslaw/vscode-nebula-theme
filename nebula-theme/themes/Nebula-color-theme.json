@@ -222,7 +222,7 @@
 			"scope": "storage.type",
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#66D9EF"
+				"foreground": "#30CFEF" //66D9EF"
 			}
 		},
 		{
@@ -325,7 +325,7 @@
 			"name": "JSON String",
 			"scope": "meta.structure.dictionary.json string.quoted.double.json",
 			"settings": {
-				"foreground": "#CFCFC2"
+				"foreground": "#f2f2fa" //CFCFC2"
 			}
 		},
 		{
@@ -447,7 +447,7 @@
 			"name": "Object, Property",
 			"scope": "variable.other.object.property",
 			"settings": {
-				"foreground": "#a4ffff"
+				"foreground": "#99ddff" //80d4ff"
 			}
 		},
 		{
@@ -465,14 +465,38 @@
 				"constant.language.boolean.false"
 			],
 			"settings": {
-				"foreground": "#c2a4ff"
+				"foreground": "#8FF05E" //#c2a4ff"
 			}
 		},
 		{
 			"name": "PunctuationTerminator",
 			"scope": "punctuation.terminator",
 			"settings": {
-				"foreground": "#E6DB74"
+				"foreground": "#AACBFFA0"
+			}
+		},
+		{
+			"name": "Punctuation",
+			"scope": [
+				"punctuation.curlybrace",
+				"punctuation.fullstop"
+			],
+			"settings": {
+				"foreground": "#EFDFFF"
+			}
+		},
+		{
+			"name": "Assignment",
+			"scope": "keyword.operator.assignment",
+			"settings": {
+				"foreground": "#fd48a4"
+			}
+		},
+		{
+			"name": "KeywordType",
+			"scope": "keyword.type",
+			"settings": {
+				"foreground": "#c2a4ff"
 			}
 		}
 	]
