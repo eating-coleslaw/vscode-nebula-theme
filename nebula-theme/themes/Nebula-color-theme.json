@@ -203,8 +203,11 @@
 			}
 		},
 		{
-			"name": "Keyword",
-			"scope": "keyword",
+			"name": "Keyword, SqlDML",
+			"scope": [
+				"keyword",
+				"keyword.other.DML.sql"
+			],
 			"settings": {
 				"foreground": "#EE409D"
 			}
@@ -444,25 +447,32 @@
 			}
 		},
 		{
-			"name": "Object, Property",
-			"scope": "variable.other.object.property",
+			"name": "Object, Property, TableName",
+			"scope": [
+				"variable.other.object.property",
+				"constant.other.table-name.sql"
+			],
 			"settings": {
 				"foreground": "#99ddff" //80d4ff"
 			}
 		},
 		{
-			"name": "Object",
-			"scope": "variable.other.object",
+			"name": "Object, DatabaseName",
+			"scope": [
+				"variable.other.object",
+				"constant.other.database-name.sql"
+			],
 			"settings": {
 				"foreground": "#d6d6ea"
 			}
 		},
 		{
-			"name": "Booleans",
+			"name": "Booleans, SqlKeywordsOther",
 			"scope": [
 				"constant.language.null",
 				"constant.language.boolean.true",
-				"constant.language.boolean.false"
+				"constant.language.boolean.false",
+				"keyword.other.DDL.create.II.sql"
 			],
 			"settings": {
 				"foreground": "#8FF05E" //#c2a4ff"
@@ -494,7 +504,10 @@
 		},
 		{
 			"name": "KeywordType",
-			"scope": "keyword.type",
+			"scope": [
+				"keyword.type",
+				"keyword.other.alias.sql"
+			],
 			"settings": {
 				"foreground": "#c2a4ff"
 			}
