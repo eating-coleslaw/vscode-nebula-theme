@@ -181,19 +181,17 @@
 			}
 		},
 		{
-			"name": "Built-in constant",
-			"scope": "constant.language",
+			"name": "Built-in constant, User-defined constant",
+			"scope": [
+				"constant.language",
+				"constant.character",
+				"constant.other",
+			],
 			"settings": {
 				"foreground": "#8FF05E"
 			}
 		},
-		{
-			"name": "User-defined constant",
-			"scope": "constant.character, constant.other",
-			"settings": {
-				"foreground": "#8FF05E"
-			}
-		},
+
 		{
 			"name": "Variable",
 			"scope": "variable",
@@ -230,10 +228,10 @@
 		},
 		{
 			"name": "Class name",
-			"scope": "entity.name.type, entity.name.class",
+			"scope": "entity.name.type.class",
 			"settings": {
 				"fontStyle": "underline",
-				"foreground": "#8FF05E"
+				"foreground": "#FD971F"
 			}
 		},
 		{
@@ -241,7 +239,7 @@
 			"scope": "entity.other.inherited-class",
 			"settings": {
 				"fontStyle": "italic underline",
-				"foreground": "#8FF05E"
+				"foreground": "#FD971F"//8FF05E"
 			}
 		},
 		{
@@ -440,8 +438,11 @@
 			}
 		},
 		{
-			"name": "this.self",
-			"scope": "variable.language",
+			"name": "this.self, SQL String",
+			"scope": [
+				"variable.language",
+				"string.quoted.single.sql"
+			],
 			"settings": {
 				"foreground": "#FD971F"
 			}
@@ -496,8 +497,11 @@
 			}
 		},
 		{
-			"name": "Assignment",
-			"scope": "keyword.operator.assignment",
+			"name": "Assignment, SqlComparison",
+			"scope": [
+				"keyword.operator.assignment",
+				"keyword.operator.comparison.sql"
+			],
 			"settings": {
 				"foreground": "#fd48a4"
 			}
