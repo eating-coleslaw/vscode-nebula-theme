@@ -467,15 +467,21 @@
 			}
 		},
 		{
-			"name": "Booleans, SqlKeywordsOther",
+			"name": "Booleans",
 			"scope": [
 				"constant.language.null",
 				"constant.language.boolean.true",
-				"constant.language.boolean.false",
-				"keyword.other.DDL.create.II.sql"
+				"constant.language.boolean.false"
 			],
 			"settings": {
-				"foreground": "#8FF05E" //#c2a4ff"
+				"foreground": "#FD971F" //#c2a4ff"
+			}
+		},
+		{
+			"name": "SqlKeywordsOther",
+			"scope": "keyword.other.DDL.create.II.sql",
+			"settings": {
+				"foreground": "#FD971F" //8FF05E"
 			}
 		},
 		{
@@ -510,6 +516,20 @@
 			],
 			"settings": {
 				"foreground": "#c2a4ff"
+			}
+		},
+		{
+			"name": "Sql String",
+			"scope": "string.quoted.single.sql",
+			"settings": {
+				"foreground": "#8FFA90" //FD971F"
+			}
+		},
+		{
+			"name": "C# String",
+			"scope": "string.quoted.double.cs",
+			"settings": {
+				"foreground": "#8FFA90"
 			}
 		}
 	]
