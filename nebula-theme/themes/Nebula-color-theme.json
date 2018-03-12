@@ -519,15 +519,11 @@
 			}
 		},
 		{
-			"name": "Sql String",
-			"scope": "string.quoted.single.sql",
-			"settings": {
-				"foreground": "#8FFA90" //FD971F"
-			}
-		},
-		{
-			"name": "C# String",
-			"scope": "string.quoted.double.cs",
+			"name": "Sql String, C# String",
+			"scope": [
+				"string.quoted.single.sql",
+				"string.quoted.double.cs"
+			],
 			"settings": {
 				"foreground": "#8FFA90"
 			}
