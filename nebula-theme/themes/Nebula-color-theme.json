@@ -168,7 +168,7 @@
         "diffEditor.removedTextBackground": "#5ff5c325",
         "gitDecoration.modifiedResourceForeground": "#5ff5c325",
         "gitDecoration.deletedResourceForeground": "#ef1f7625",
-        "progressBar.background": "#0df2df",
+        "progressBar.background": "#0df2df"
 	},
 	"tokenColors": [
 		{
