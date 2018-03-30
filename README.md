@@ -1,6 +1,8 @@
 # Nebula Theme for VS Code
 🌌🌸Fresh colors on a dark, cold slate. An almost-material theme for Visual Studio Code.
 
+![Theme Preview](https://i.imgur.com/WploChI.png)
+
 ## Installation
 
 1. Put \/vscode-nebula-theme on your computer somewhere or, optionally, skip to step 2
