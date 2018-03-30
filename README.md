@@ -1,13 +1,20 @@
-# README
-## This is the README for your extension "nebula-theme"
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+# Nebula Theme for VS Code
+🌌🌸Fresh colors on a dark, cold slate. An almost-material theme for Visual Studio Code.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+![Theme Preview](https://i.imgur.com/WploChI.png)
 
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## Installation
 
-**Enjoy!**
+1. Put \/vscode-nebula-theme on your computer somewhere or, optionally, skip to step 2
+2. Move \/vscode-nebula-theme to **\%USERPROFILE%\\.vscode\extensions** (or whatever the Mac equivalent is)
+3. Navigate to File > Preferences > Color Theme > **Nebula**
+4. Reload any VS Code windows
+5. Be happy 💖
+
+## Contributing
+
+Please say everything you hate about me and this theme [here](https://github.com/eating-coleslaw/vscode-nebula-theme/issues). I'm only familiar with a handful of languages, so if your gripe is language-specific please include the relevant [scope selectors](https://code.visualstudio.com/docs/extensions/themes-snippets-colorizers#_textmate-theme-rules) in the issue.
+
+# 
+
+ _Crafted with love, for you, by Chirtle_ 💕
