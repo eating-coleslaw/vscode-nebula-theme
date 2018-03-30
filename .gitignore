@@ -1,3 +1,6 @@
 
 *.7z
 *.zip
+
+node_modules
+*.vsix
