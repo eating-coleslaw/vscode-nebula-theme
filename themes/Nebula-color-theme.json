@@ -162,11 +162,15 @@
         "inputValidation.warningBackground": "#353551",
         "inputValidation.errorBorder": "#E34F8C",
         "inputValidation.errorBackground": "#353551",
-        "widget.shadow": "#353551",
+        "widget.shadow": "#1F2330",
         "diffEditor.insertedTextBackground": "#E34F8C25",
         "diffEditor.removedTextBackground": "#6EEEC425",
-        "gitDecoration.modifiedResourceForeground": "#6EEEC425",
-        "gitDecoration.deletedResourceForeground": "#E34F8C25",
+        "gitDecoration.modifiedResourceForeground": "#6EEEC4",
+		"gitDecoration.deletedResourceForeground": "#E34F8C55",
+		"gitDecoration.untrackedResourceForeground": "#e7ADFBa0",
+		"gitDecoration.submoduleResourceForeground": "#C7ADFB5f",
+		"gitDecoration.conflictingResourceForeground": "#07ADFB",
+		"gitDecoration.ignoredResourceForeground": "#919CB9af",
 		"progressBar.background": "#24E8D8"
 	},
 	"tokenColors": [
