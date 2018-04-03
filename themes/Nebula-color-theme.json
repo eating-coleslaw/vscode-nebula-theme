@@ -416,7 +416,8 @@
 			"name": "Markup Quote",
 			"scope": "markup.quote",
 			"settings": {
-				"foreground": "#E34F8C"
+				"foreground": "#FAFAA0",
+				"fontStyle": "italic"
 			}
 		},
 		{
