@@ -403,7 +403,7 @@
 		{
 			"scope": "constant.numeric.line-number.find-in-files - match",
 			"settings": {
-				"foreground": "#AE81FFA0"
+				"foreground": "#C7ADFBA0"
 			}
 		},
 		{
@@ -420,17 +420,36 @@
 			}
 		},
 		{
-			"name": "Markup Lists",
-			"scope": "markup.list",
+			"name": "Markup Numbered Lists",
+			"scope": [
+				"markup.list.numbered",
+				"beginning.punctuation.definition.list.markdown"
+			],
 			"settings": {
-				"foreground": "#FAFAA0" 
+				"foreground": "#F39B35"
 			}
 		},
 		{
-			"name": "Markup Styling",
-			"scope": "markup.bold, markup.italic",
+			"name": "Markup Unnumbered Lists",
+			"scope": "markup.list",
 			"settings": {
-				"foreground": "#74D6E9"
+				"foreground": "#FAFAA0"
+			}
+		},
+		{
+			"name": "Markup Italic",
+			"scope": "markup.italic",
+			"settings": {
+				"foreground": "#F8C275",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Markup Bold",
+			"scope": "markup.bold",
+			"settings": {
+				"foreground": "#F8C275",
+				"fontStyle": "bold"
 			}
 		},
 		{
@@ -438,14 +457,38 @@
 			"scope": "markup.inline.raw",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#F39B35"
+				"foreground": "#97EE91"
+			}
+		},
+		{
+			"name": "Inline Link",
+			"scope": [
+				"meta.link.inline.markdown",
+				"meta.image.inline.markdown"
+			],
+			"settings": {
+				"foreground": "#99ddff"
+			}
+		},
+		{
+			"name": "Link Name",
+			"scope": "string.other.link.description.markdown",
+			"settings": {
+				"foreground": "#30CFEF"
 			}
 		},
 		{
 			"name": "Markup Headings",
 			"scope": "markup.heading",
 			"settings": {
-				"foreground": "#97EE91"
+				"foreground": "#E34F8C"
+			}
+		},
+		{
+			"name": "Markup Heading Title",
+			"scope": "entity.name.section.markdown",
+			"settings": {
+				"foreground": "#E752A1"
 			}
 		},
 		{
@@ -453,7 +496,21 @@
 			"scope": "markup.heading.setext",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#97EE91"
+				"foreground": "#00EE91"
+			}
+		},
+		{
+			"name": "Markup Paragraph",
+			"scope": "text.html.markdown",
+			"settings": {
+				"foreground": "#FCF6FF"
+			}
+		},
+		{
+			"name": "Markup Escape",
+			"scope": "constant.character.escape.markdown",
+			"settings": {
+				"foreground": "#C7ADFB"
 			}
 		},
 		{
