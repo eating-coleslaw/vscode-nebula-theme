@@ -422,18 +422,10 @@
 		{
 			"name": "Markup Numbered Lists",
 			"scope": [
-				"markup.list.numbered",
 				"beginning.punctuation.definition.list.markdown"
 			],
 			"settings": {
 				"foreground": "#F39B35"
-			}
-		},
-		{
-			"name": "Markup Unnumbered Lists",
-			"scope": "markup.list",
-			"settings": {
-				"foreground": "#FAFAA0"
 			}
 		},
 		{
@@ -445,11 +437,14 @@
 			}
 		},
 		{
-			"name": "Markup Bold",
-			"scope": "markup.bold",
+			"name": "Markup Non-italic",
+			"scope": [
+				"markup.bold",
+				"markup.underline"
+			],
 			"settings": {
 				"foreground": "#F8C275",
-				"fontStyle": "bold"
+				"fontStyle": ""
 			}
 		},
 		{
@@ -464,7 +459,8 @@
 			"name": "Inline Link",
 			"scope": [
 				"meta.link.inline.markdown",
-				"meta.image.inline.markdown"
+				"meta.image.inline.markdown",
+				"markup.underline.link"
 			],
 			"settings": {
 				"foreground": "#99ddff"
@@ -488,15 +484,7 @@
 			"name": "Markup Heading Title",
 			"scope": "entity.name.section.markdown",
 			"settings": {
-				"foreground": "#E752A1"
-			}
-		},
-		{
-			"name": "Markup Setext Header",
-			"scope": "markup.heading.setext",
-			"settings": {
-				"fontStyle": "",
-				"foreground": "#00EE91"
+				"foreground": "#E34F8C"
 			}
 		},
 		{
@@ -509,6 +497,13 @@
 		{
 			"name": "Markup Escape",
 			"scope": "constant.character.escape.markdown",
+			"settings": {
+				"foreground": "#E752A1"
+			}
+		},
+		{
+			"name": "Markup Code Block",
+			"scope": "markup.fenced_code.block.markdown",
 			"settings": {
 				"foreground": "#C7ADFB"
 			}
