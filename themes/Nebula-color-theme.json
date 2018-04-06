@@ -214,7 +214,7 @@
 			"scope": [
 				"keyword.var",
 				"keyword.const",
-				
+				"constant",
 				"keyword.struct",
 				"keyword.interface",
 				"keyword.function",
@@ -300,7 +300,6 @@
 				"variable.language",
 				"constant.numeric",
 				"variable.parameter",
-				"constant",
 				"markup.bold",
 				"markup.underline",
 				"markup.italic"
