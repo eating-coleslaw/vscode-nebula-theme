@@ -2,10 +2,10 @@
 	"name": "Nebula - Slab",
 	"include": "./Nebula-color-theme.json",
 	"colors": {
-		"activityBar.background": "#1F2330", //f6f0ff",
-		"activityBar.foreground": "#f6f0ff", //353551",
-		"activityBar.border": "#0F1320", //FBD3E1"
-		"statusBar.background": "#1F2330", //0F1320"
+		"activityBar.background": "#1F2330",
+		"activityBar.foreground": "#f6f0ff",
+		"activityBar.border": "#0F1320",
+		"statusBar.background": "#1F2330",
 		"statusBar.border": "#0F1320",
 		"statusBar.noFolderBackground": "#1F2330",
 		"statusBar.debuggingBackground": "#1F2330",
@@ -13,6 +13,7 @@
 		"editorWidget.background": "#1F2330",
 		"editorSuggestWidget.background": "#1F2330",
 		"editorSuggestWidget.selectedBackground": "#35355190",
+		"editorMarkerNavigation.background": "#1F2330",
 		"dropdown.listBackground": "#27273A",
 		"debugToolBar.background": "#1F2330",
 		"inputValidation.infoBackground": "#1F2330",
