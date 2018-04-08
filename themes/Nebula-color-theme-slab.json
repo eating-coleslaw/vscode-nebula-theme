@@ -4,6 +4,23 @@
 	"colors": {
 		"activityBar.background": "#1F2330", //f6f0ff",
 		"activityBar.foreground": "#f6f0ff", //353551",
-		"activityBar.border": "#FBD3E1"
+		"activityBar.border": "#0F1320", //FBD3E1"
+		"statusBar.background": "#1F2330", //0F1320"
+		"statusBar.border": "#0F1320",
+		"panel.background": "#1F2330",
+		"editorWidget.background": "#1F2330",
+		"editorSuggestWidget.background": "#1F2330",
+		"editorSuggestWidget.selectedBackground": "#35355190",
+		"dropdown.listBackground": "#27273A",
+		"debugToolBar.background": "#1F2330",
+		"inputValidation.infoBackground": "#1F2330",
+		"inputValidation.warningBackground": "#1F2330",
+		"inputValidation.errorBackground": "#1F2330",
+		"notificationCenterHeader.background": "#1F2330",
+		"sideBarSectionHeader.background": "#1F2330",
+		"editorHoverWidget.background": "#1F2330",
+		"peekViewTitle.background": "#1F2330",
+		"peekViewResult.background": "#1F2330",
+		"peekViewResult.selectionBackground": "#35355190"
 	}
 }

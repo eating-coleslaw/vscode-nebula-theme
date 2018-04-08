@@ -167,7 +167,7 @@
 		"inputValidation.warningBackground": "#353551",
 		"inputValidation.errorBorder": "#E34F8C",
 		"inputValidation.errorBackground": "#353551",
-		"widget.shadow": "#1F2330",
+		"widget.shadow": "#0F1320", //1F2330",
 		"diffEditor.insertedTextBackground": "#E34F8C25",
 		"diffEditor.removedTextBackground": "#6EEEC425",
 		"gitDecoration.modifiedResourceForeground": "#6EEEC4",
