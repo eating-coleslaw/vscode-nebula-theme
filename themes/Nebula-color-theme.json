@@ -25,6 +25,7 @@
 		"peekViewEditor.matchHighlightBackground": "#363C4C",
 		"editorGroup.dropBackground": "#363C4C5f",
 		"statusBar.noFolderForeground": "#E34FBC",
+		"statusBar.noFolderBackground": "#27273A",
 		"activityBar.dropBackground": "#0F1320",
 		"activityBarBadge.background": "#E34F8C",
 		"sideBar.dropBackground": "#363C4C5f",

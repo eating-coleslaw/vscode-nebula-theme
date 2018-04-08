@@ -7,6 +7,8 @@
 		"activityBar.border": "#0F1320", //FBD3E1"
 		"statusBar.background": "#1F2330", //0F1320"
 		"statusBar.border": "#0F1320",
+		"statusBar.noFolderBackground": "#1F2330",
+		"statusBar.debuggingBackground": "#1F2330",
 		"panel.background": "#1F2330",
 		"editorWidget.background": "#1F2330",
 		"editorSuggestWidget.background": "#1F2330",
