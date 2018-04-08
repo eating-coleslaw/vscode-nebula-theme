@@ -16,6 +16,11 @@
                 "label": "Nebula",
                 "uiTheme": "vs-dark",
                 "path": "./themes/Nebula-color-theme.json"
+            },
+            {
+                "label": "Nebula - Slab",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Nebula-color-theme-slab.json"
             }
         ]
     }

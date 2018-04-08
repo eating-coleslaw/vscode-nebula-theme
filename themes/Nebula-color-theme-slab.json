@@ -1,0 +1,9 @@
+{
+	"name": "Nebula - Slab",
+	"include": "./Nebula-color-theme.json",
+	"colors": {
+		"activityBar.background": "#1F2330", //f6f0ff",
+		"activityBar.foreground": "#f6f0ff", //353551",
+		"activityBar.border": "#FBD3E1"
+	}
+}
