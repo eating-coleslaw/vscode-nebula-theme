@@ -24,9 +24,9 @@
 		"peekViewResult.matchHighlightBackground": "#363C4C",
 		"peekViewEditor.matchHighlightBackground": "#363C4C",
 		"editorGroup.dropBackground": "#363C4C5f",
-		"statusBar.noFolderForeground": "#6EEEC4",
-		"statusBar.noFolderBackground": "#27273A",
-		"statusBar.noFolderBorder": "#6EEEC4",
+		"statusBar.noFolderForeground": "##E34FBC", //6EEEC4",
+		//"statusBar.noFolderBackground": "#27273A",
+		//"statusBar.noFolderBorder": "#6EEEC4",
 		"activityBar.dropBackground": "#0F1320",
 		"activityBarBadge.background": "#E34F8C",
 		"sideBar.dropBackground": "#363C4C5f",
@@ -35,8 +35,8 @@
 		"terminalCursor.background": "#0F1320",
 		"terminal.selectionBackground": "#42557B5A",
 		"statusBar.debuggingBackground": "#27273A",
-		"statusBar.debuggingForeground": "#97EE91",
-		"statusBar.debuggingBorder": "#97EE91",
+		"statusBar.debuggingForeground": "#6EEEC4", //97EE91",
+		//"statusBar.debuggingBorder": "#97EE91",
 		"extensionButton.prominentBackground": "#97EE91",
 		"extensionButton.prominentForeground": "#0F1320",
 		"extensionButton.prominentHoverBackground": "#AFFA90",
@@ -96,7 +96,7 @@
 		"sideBarTitle.foreground": "#24E8D8",
 		"editorMarkerNavigation.background": "#353551",
 		"editorError.foreground": "#F36F98",
-		"editorWarning.foreground": "#6EEEC4",
+		"editorWarning.foreground": "#f2c88c", //6EEEC4",
 		"list.dropBackground": "#f6f0ff15",
 		"badge.background": "#E34F8C",
 		"editorWidget.border": "#24E8D8",
@@ -163,14 +163,14 @@
 		"dropdown.foreground": "#353551",
 		"inputValidation.infoBorder": "#919CB9",
 		"inputValidation.infoBackground": "#353551",
-		"inputValidation.warningBorder": "#6EEEC4",
+		"inputValidation.warningBorder": "#f2c88c", //6EEEC4",
 		"inputValidation.warningBackground": "#353551",
 		"inputValidation.errorBorder": "#E34F8C",
 		"inputValidation.errorBackground": "#353551",
 		"widget.shadow": "#0F1320", //1F2330",
 		"diffEditor.insertedTextBackground": "#E34F8C25",
 		"diffEditor.removedTextBackground": "#6EEEC425",
-		"gitDecoration.modifiedResourceForeground": "#6EEEC4",
+		"gitDecoration.modifiedResourceForeground": "#f2c88c", //6EEEC4",
 		"gitDecoration.deletedResourceForeground": "#E34F8C55",
 		"gitDecoration.untrackedResourceForeground": "#e7ADFBa0",
 		"gitDecoration.submoduleResourceForeground": "#C7ADFB5f",
@@ -525,7 +525,7 @@
 		{
 			"scope": "token.warn-token",
 			"settings": {
-				"foreground": "#6EEEC4"
+				"foreground": "#f2c88c" //6EEEC4"
 			}
 		},
 		{
