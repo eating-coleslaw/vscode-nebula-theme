@@ -370,7 +370,8 @@
 			"scope": [
 				"comment",
 				"markup.italic.markdown",
-				"punctuation.definition.italic.markdown"
+				"punctuation.definition.italic.markdown",
+				"storage.type.function"
 			],
 			"settings": {
 				"fontStyle": "italic"
