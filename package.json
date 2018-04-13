@@ -1,7 +1,7 @@
 {
     "name": "nebula-theme",
     "displayName": "nebula-theme",
-    "description": "Dark theme with bright colors inspired by dead stars.",
+    "description": "Fresh colors on a dark, cold slate. An almost-material theme for Visual Studio Code..",
     "version": "0.0.1",
     "publisher": "chirtlelovesdolls",
     "engines": {
