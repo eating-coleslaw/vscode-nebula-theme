@@ -1,0 +1,29 @@
+{
+	"name": "Nebula - Console",
+	"include": "./Nebula-color-theme.json",
+	"colors": {
+		"activityBar.background": "#f6f0ff",
+		"activityBar.foreground": "#353551",
+		"activityBar.border": "#FBD3E1",
+		"statusBar.background": "#27273A",
+		"statusBar.border": "#1F2330",
+		"statusBar.noFolderBackground": "#1F2330",
+		"statusBar.debuggingBackground": "#27273A",
+		"panel.background": "#353551",
+		"editorWidget.background": "#353551",
+		"editorSuggestWidget.background": "#353551",
+		"editorSuggestWidget.selectedBackground": "#f6f0ff30",
+		"editorMarkerNavigation.background": "#353551",
+		"dropdown.listBackground": "#27273A",
+		"debugToolBar.background": "#353551",
+		"inputValidation.infoBackground": "#353551",
+		"inputValidation.warningBackground": "#353551",
+		"inputValidation.errorBackground": "#353551",
+		"notificationCenterHeader.background": "#353551",
+		"sideBarSectionHeader.background": "#353551",
+		"editorHoverWidget.background": "#353551",
+		"peekViewTitle.background": "#353551",
+		"peekViewResult.background": "#27273A",
+		"peekViewResult.selectionBackground": "#f6f0ff30"
+	}
+}

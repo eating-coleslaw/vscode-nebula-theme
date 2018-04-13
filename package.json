@@ -18,9 +18,9 @@
                 "path": "./themes/Nebula-color-theme.json"
             },
             {
-                "label": "Nebula - Slab",
+                "label": "Nebula - Console",
                 "uiTheme": "vs-dark",
-                "path": "./themes/Nebula-color-theme-slab.json"
+                "path": "./themes/Nebula-color-theme-console.json"
             }
         ]
     }
