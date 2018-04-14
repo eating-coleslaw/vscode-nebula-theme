@@ -206,7 +206,8 @@
 				"support.type.property-name",
 				"variable.other.object.property",
 				"constant.other.table-name.sql",
-				"meta.object-literal.key.js"
+				"meta.object-literal.key.js",
+				"string.other.link.description.markdown"
 			],
 			"settings": {
 				"foreground": "#8DF9F9"
@@ -259,7 +260,11 @@
 				"markup.bold",
 				"markup.italic",
 				"string.quoted.single.js",
-				"string.quoted.double.js"
+				"string.quoted.double.js",
+				"meta.link.inline.markdown",
+				"meta.image.inline.markdown",
+				"markup.underline.link",
+				"entity.name.type.js"
 			],
 			"settings": {
 				"foreground": "#50DFFE"
@@ -305,7 +310,9 @@
 				"variable.parameter",
 				"markup.bold",
 				"markup.underline",
-				"markup.italic"
+				"markup.italic",
+				"string.quoted.double.css",
+				"punctuation.definition.string.css"
 			],
 			"settings": {
 				"foreground": "#F8C275"
@@ -318,7 +325,9 @@
 				"keyword",
 				"punctuation.definition.heading",
 				"punctuation.definition.keyword",
-				"keyword.other.DML.sql"
+				"keyword.other.DML.sql",
+				"constant.character.escape.markdown",
+				"entity.other.attribute-name.class.css"
 			],
 			"settings": {
 				"foreground": "#E752A1"
@@ -456,7 +465,9 @@
 				"variable.argument.css",
 				"markup.quote",
 				"entity.other.inherited-class",
-				"entity.other.attribute-name.pseudo-element.css"
+				"entity.other.attribute-name.pseudo-element.css",
+				"string.quoted.double.css",
+				"punctuation.definition.string.css"
 			],
 			"settings": {
 				"fontStyle": "italic"
@@ -483,20 +494,6 @@
 			],
 			"settings": {
 				"foreground": "#99ddff"
-			}
-		},
-		{
-			"name": "Link Name",
-			"scope": "string.other.link.description.markdown",
-			"settings": {
-				"foreground": "#30CFEF"
-			}
-		},
-		{
-			"name": "Markup Escape",
-			"scope": "constant.character.escape.markdown",
-			"settings": {
-				"foreground": "#E752A1"
 			}
 		},
 		{
@@ -552,31 +549,6 @@
 			],
 			"settings": {
 				"foreground": "#d6d6ea"
-			}
-		},
-		{
-			"name": "CSS Class Name",
-			"scope": "entity.other.attribute-name.class.css",
-			"settings": {
-				"foreground": "#E752A1"
-			}
-		},
-		{
-			"name": "CSS String",
-			"scope": [
-				"string.quoted.double.css",
-				"punctuation.definition.string.css"
-			],
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#F8C275"
-			}
-		},
-		{
-			"name": "JS Entity Type",
-			"scope": "entity.name.type.js",
-			"settings": {
-				"foreground": "#30CFEF"
 			}
 		}
 	]
