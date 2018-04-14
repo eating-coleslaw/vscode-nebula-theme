@@ -371,7 +371,9 @@
 				"comment",
 				"markup.italic.markdown",
 				"punctuation.definition.italic.markdown",
-				"storage.type.function"
+				"storage.type.function",
+				"meta.functiona.variable.css",
+				"variable.argument.css"
 			],
 			"settings": {
 				"fontStyle": "italic"
@@ -485,8 +487,14 @@
 			}
 		},
 		{
-			"name": "Markup Code Block",
-			"scope": "markup.fenced_code.block.markdown",
+			"name": "Perfume",
+			"scope": [
+				"markup.fenced_code.block.markdown",
+				"keyword.type",
+				"keyword.other.alias.sql",
+				"meta.functiona.variable.css",
+				"variable.argument.css"
+			],
 			"settings": {
 				"foreground": "#C7ADFB"
 			}
@@ -542,16 +550,6 @@
 			"scope": "keyword.operator.assignment",
 			"settings": {
 				"foreground": "#fd48a4"
-			}
-		},
-		{
-			"name": "KeywordType",
-			"scope": [
-				"keyword.type",
-				"keyword.other.alias.sql"
-			],
-			"settings": {
-				"foreground": "#C7ADFB"
 			}
 		},
 		{
@@ -618,17 +616,6 @@
 			],
 			"settings": {
 				"foreground": "#FAFAA0"
-			}
-		},
-		{
-			"name": "CSS Important",
-			"scope": [
-				"meta.functiona.variable.css",
-				"variable.argument.css"
-			],
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#C7ADFB"
 			}
 		},
 		{
