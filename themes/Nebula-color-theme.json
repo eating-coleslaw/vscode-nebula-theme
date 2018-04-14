@@ -423,6 +423,19 @@
 			}
 		},
 		{
+			"name": "Jaffa",
+			"scope": [
+				"beginning.punctuation.definition.list.markdown",
+				"constant.language.null",
+				"constant.language.boolean.true",
+				"constant.language.boolean.false",
+				"entity.other.attribute-name.pseudo-element.css"
+			],
+			"settings": {
+				"foreground": "#F39B35"
+			}
+		},
+		{
 			"name": "Bold",
 			"scope": [
 				"markup.bold.markdown",
@@ -442,7 +455,8 @@
 				"meta.functiona.variable.css",
 				"variable.argument.css",
 				"markup.quote",
-				"entity.other.inherited-class"
+				"entity.other.inherited-class",
+				"entity.other.attribute-name.pseudo-element.css"
 			],
 			"settings": {
 				"fontStyle": "italic"
@@ -458,15 +472,6 @@
 			],
 			"settings": {
 				"fontStyle": "underline"
-			}
-		},
-		{
-			"name": "Markup Numbered Lists",
-			"scope": [
-				"beginning.punctuation.definition.list.markdown"
-			],
-			"settings": {
-				"foreground": "#F39B35"
 			}
 		},
 		{
@@ -513,16 +518,6 @@
 			}
 		},
 		{
-			"name": "Booleans",
-			"scope": [
-				"constant.language.null",
-				"constant.language.boolean.true",
-				"constant.language.boolean.false"
-			],
-			"settings": {
-				"foreground": "#F39B35"
-			}
-		},
 		{
 			"name": "PunctuationTerminator",
 			"scope": "punctuation.terminator",
@@ -564,16 +559,6 @@
 			"scope": "entity.other.attribute-name.class.css",
 			"settings": {
 				"foreground": "#E752A1"
-			}
-		},
-		{
-			"name": "CSS Pseudo-Element",
-			"scope": [
-				"entity.other.attribute-name.pseudo-element.css"
-			],
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#F39B35"
 			}
 		},
 		{
