@@ -411,6 +411,18 @@
 			}
 		},
 		{
+			"name": "Sulu",
+			"scope": [
+				"entity.name.type",
+				"entity.name.class",
+				"entity.other.inherited-class",
+				"entity.other.attribute-name.id.css"
+			],
+			"settings": {
+				"foreground": "#97EE91"
+			}
+		},
+		{
 			"name": "Bold",
 			"scope": [
 				"markup.bold.markdown",
@@ -429,26 +441,23 @@
 				"storage.type.function",
 				"meta.functiona.variable.css",
 				"variable.argument.css",
-				"markup.quote"
+				"markup.quote",
+				"entity.other.inherited-class"
 			],
 			"settings": {
 				"fontStyle": "italic"
 			}
 		},
 		{
-			"name": "Class name",
-			"scope": "entity.name.type, entity.name.class",
+			"name": "Underline",
+			"scope": [
+				"entity.other.inherited-class",
+				"entity.name.type",
+				"entity.name.class",
+				"entity.other.inherited-class"
+			],
 			"settings": {
-				"fontStyle": "underline",
-				"foreground": "#97EE91"
-			}
-		},
-		{
-			"name": "Inherited class",
-			"scope": "entity.other.inherited-class",
-			"settings": {
-				"fontStyle": "italic underline",
-				"foreground": "#97EE91"
+				"fontStyle": "underline"
 			}
 		},
 		{
@@ -576,13 +585,6 @@
 			"settings": {
 				"fontStyle": "italic",
 				"foreground": "#F8C275"
-			}
-		},
-		{
-			"name": "CSS Id",
-			"scope": "entity.other.attribute-name.id.css",
-			"settings": {
-				"foreground": "#97EE91"
 			}
 		},
 		{
