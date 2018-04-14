@@ -2,7 +2,7 @@
     "name": "nebula-theme",
     "displayName": "nebula-theme",
     "description": "Fresh colors on a dark, cold slate. An almost-material theme for Visual Studio Code..",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "ChirtleLovesDolls",
     "engines": {
         "vscode": "^1.21.0"
