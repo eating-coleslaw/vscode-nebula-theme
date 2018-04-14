@@ -355,32 +355,7 @@
 			  "foreground": "#FBD3E1"
 			}
 		  },
-		{
-			"name": "Bold",
-			"scope": [
-				"markup.bold.markdown",
-				"punctuation.definition.bold.markdown"
-			],
-			"settings": {
-				"fontStyle": "bold"
-			}
-		},
-		{
-			"name": "Italic",
-			"scope": [
-				"comment",
-				"markup.italic.markdown",
-				"punctuation.definition.italic.markdown",
-				"storage.type.function",
-				"meta.functiona.variable.css",
-				"variable.argument.css",
-				"markup.quote"
-			],
-			"settings": {
-				"fontStyle": "italic"
-			}
-		},
-		{
+		  {
 			"name": "Cranberry",
 			"scope": [
 				"punctuation.definition.template-expression",
@@ -422,6 +397,31 @@
 			],
 			"settings": {
 				"foreground": "#C7ADFB"
+			}
+		},
+		{
+			"name": "Bold",
+			"scope": [
+				"markup.bold.markdown",
+				"punctuation.definition.bold.markdown"
+			],
+			"settings": {
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Italic",
+			"scope": [
+				"comment",
+				"markup.italic.markdown",
+				"punctuation.definition.italic.markdown",
+				"storage.type.function",
+				"meta.functiona.variable.css",
+				"variable.argument.css",
+				"markup.quote"
+			],
+			"settings": {
+				"fontStyle": "italic"
 			}
 		},
 		{
