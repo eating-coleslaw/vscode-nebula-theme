@@ -395,6 +395,20 @@
 			}
 		},
 		{
+			"name": "Perfume",
+			"scope": [
+				"markup.fenced_code.block.markdown",
+				"keyword.type",
+				"keyword.other.alias.sql",
+				"meta.functiona.variable.css",
+				"variable.argument.css",
+				"constant.numeric.line-number.find-in-files - match"
+			],
+			"settings": {
+				"foreground": "#C7ADFB"
+			}
+		},
+		{
 			"name": "Variable",
 			"scope": "variable",
 			"settings": {
@@ -423,12 +437,6 @@
 			"scope": "markup.changed",
 			"settings": {
 				"foreground": "#FAFAA0"
-			}
-		},
-		{
-			"scope": "constant.numeric.line-number.find-in-files - match",
-			"settings": {
-				"foreground": "#C7ADFBA0"
 			}
 		},
 		{
@@ -484,19 +492,6 @@
 			"scope": "constant.character.escape.markdown",
 			"settings": {
 				"foreground": "#E752A1"
-			}
-		},
-		{
-			"name": "Perfume",
-			"scope": [
-				"markup.fenced_code.block.markdown",
-				"keyword.type",
-				"keyword.other.alias.sql",
-				"meta.functiona.variable.css",
-				"variable.argument.css"
-			],
-			"settings": {
-				"foreground": "#C7ADFB"
 			}
 		},
 		{
