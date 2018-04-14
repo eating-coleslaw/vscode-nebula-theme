@@ -3,7 +3,7 @@
     "displayName": "nebula-theme",
     "description": "Fresh colors on a dark, cold slate. An almost-material theme for Visual Studio Code..",
     "version": "0.0.1",
-    "publisher": "chirtlelovesdolls",
+    "publisher": "ChirtleLovesDolls",
     "engines": {
         "vscode": "^1.21.0"
     },
@@ -23,5 +23,13 @@
                 "path": "./themes/Nebula-color-theme-console.json"
             }
         ]
+    },
+    "icon": "images/icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/eating-coleslaw/vscode-nebula-theme"
+    },
+    "bugs": {
+        "url": "https://github.com/eating-coleslaw/vscode-nebula-theme/issues"
     }
 }

@@ -3,5 +3,5 @@ All notable changes to the "nebula-theme" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [1.0.0 - 2018-04-14]
 - Initial release
