@@ -187,6 +187,8 @@
 				"punctuation.definition.dictionary",
 				"punctuation.definition.string",
 				"punctuation.definition.tag",
+				"punctuation.curlybrace",
+				"punctuation.fullstop",
 				"punctuation.section",
 				"punctuation.separator",
 				"punctuation.support",
@@ -238,7 +240,13 @@
 		},
 		{
 			"name": "Rock Blue",
-			"scope": [],
+			"scope": [
+				"punctuation.terminator",
+				"punctuation.section.function.begin.bracket.round.css",
+				"punctuation.section.function.end.bracket.round.css",
+				"punctuation.section.property-list.begin.bracket.curly.css",
+				"punctuation.section.property-list.end.bracket.curly.css"
+			],
 			"settings": {
 				"foreground": "#919CB9"
 			}
@@ -486,7 +494,7 @@
 			}
 		},
 		{
-			"name": "Inline Link",
+			"name": "Anakiwa",
 			"scope": [
 				"meta.link.inline.markdown",
 				"meta.image.inline.markdown",
@@ -497,46 +505,15 @@
 			}
 		},
 		{
-			"scope": "token.info-token",
+			"scope": "Cornflower Blue",
 			"settings": {
 				"foreground": "#6796e6"
 			}
 		},
 		{
-			"scope": "token.warn-token",
+			"scope": "Manhattan",
 			"settings": {
 				"foreground": "#f2c88c"
-			}
-		},
-		{
-			"scope": "token.debug-token",
-			"settings": {
-				"foreground": "#B2CFFB"
-			}
-		},
-		{
-		{
-			"name": "PunctuationTerminator",
-			"scope": "punctuation.terminator",
-			"settings": {
-				"foreground": "#B2CFFBA0"
-			}
-		},
-		{
-			"name": "Punctuation",
-			"scope": [
-				"punctuation.curlybrace",
-				"punctuation.fullstop"
-			],
-			"settings": {
-				"foreground": "#EFDFFF"
-			}
-		},
-		{
-			"name": "Assignment",
-			"scope": "keyword.operator.assignment",
-			"settings": {
-				"foreground": "#fd48a4"
 			}
 		},
 		{
