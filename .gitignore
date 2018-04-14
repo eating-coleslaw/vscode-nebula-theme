@@ -3,11 +3,7 @@ CHANGELOG.md
 vsc-extension-quickstart.md
 *.7z
 *.zip
+python.python
 
 node_modules
 *.vsix
-<<<<<<< HEAD
-*.PNG
-=======
-*.png
->>>>>>> learn-2-readme
