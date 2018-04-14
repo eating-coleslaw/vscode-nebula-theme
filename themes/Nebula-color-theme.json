@@ -373,7 +373,8 @@
 				"punctuation.definition.italic.markdown",
 				"storage.type.function",
 				"meta.functiona.variable.css",
-				"variable.argument.css"
+				"variable.argument.css",
+				"markup.quote"
 			],
 			"settings": {
 				"fontStyle": "italic"
@@ -388,10 +389,25 @@
 				"markup.deleted",
 				"markup.heading",
 				"entity.name.section.markdown",
-				"token.error-token",
+				"token.error-token"
 			],
 			"settings": {
 				"foreground": "#E34F8C"
+			}
+		},
+		{
+			"name": "Texas",
+			"scope": [
+				"markup.changed",
+				"entity.name.filename.find-in-files",
+				"markup.quote",
+				"keyword.other.unit.px.css",
+				"keyword.other.unit.fr.css",
+				"keyword.other.unit.s.css",
+				"keyword.other.unit.percentage.css"
+			],
+			"settings": {
+				"foreground": "#FAFAA0"
 			}
 		},
 		{
@@ -430,27 +446,6 @@
 			"settings": {
 				"fontStyle": "italic underline",
 				"foreground": "#97EE91"
-			}
-		},
-		{
-			"name": "diff.changed",
-			"scope": "markup.changed",
-			"settings": {
-				"foreground": "#FAFAA0"
-			}
-		},
-		{
-			"scope": "entity.name.filename.find-in-files",
-			"settings": {
-				"foreground": "#FAFAA0"
-			}
-		},
-		{
-			"name": "Markup Quote",
-			"scope": "markup.quote",
-			"settings": {
-				"foreground": "#FAFAA0",
-				"fontStyle": "italic"
 			}
 		},
 		{
@@ -599,18 +594,6 @@
 			"scope": "entity.other.attribute-name.id.css",
 			"settings": {
 				"foreground": "#97EE91"
-			}
-		},
-		{
-			"name": "CSS Unit",
-			"scope": [
-				"keyword.other.unit.px.css",
-				"keyword.other.unit.fr.css",
-				"keyword.other.unit.s.css",
-				"keyword.other.unit.percentage.css"
-			],
-			"settings": {
-				"foreground": "#FAFAA0"
 			}
 		},
 		{
