@@ -216,7 +216,7 @@
 			}
 		},
 		{
-			"name": "Light Green",
+			"name": "Sulu",
 			"scope": [
 				"keyword.var",
 				"keyword.const",
@@ -232,14 +232,18 @@
 				"support.constant",
 				"support.type",
 				"support.class",
-				"markup.inserted"
+				"markup.inserted",
+				"entity.name.type",
+				"entity.name.class",
+				"entity.other.inherited-class",
+				"entity.other.attribute-name.id.css"
 			],
 			"settings": {
 				"foreground": "#97EE91"
 			}
 		},
 		{
-			"name": "Rock Blue",
+			"name": "Bali Hai",
 			"scope": [
 				"punctuation.terminator",
 				"punctuation.section.function.begin.bracket.round.css",
@@ -252,7 +256,7 @@
 			}
 		},
 		{
-			"name": "Scampi",
+			"name": "Deluge",
 			"scope": [
 				"comment"
 			],
@@ -261,7 +265,7 @@
 			}
 		},
 		{
-			"name": "Baby Blue",
+			"name": "Malibu",
 			"scope": [
 				"string",
 				"markup.quote",
@@ -291,7 +295,7 @@
 			}
 		},
 		{
-			"name": "Light Coral",
+			"name": "Froly",
 			"scope": [
 				"entity.name.class",
 				"entity.name.function",
@@ -308,7 +312,7 @@
 			}
 		},
 		{
-			"name": "Tacao",
+			"name": "Rajah",
 			"scope": [
 				"entity.name.tag",
 				"storage",
@@ -327,7 +331,7 @@
 			}
 		},
 		{
-			"name": "Dark Pink",
+			"name": "Deep Blush",
 			"scope": [
 				"entity.name.section",
 				"keyword",
@@ -342,7 +346,7 @@
 			}
 		},
 		{
-			"name": "Emphasized Punctuation",
+			"name": "Classic Rose",
 			"scope": [
 			  "meta.brace",
 			  "punctuation.definition.arguments",
@@ -428,18 +432,6 @@
 			}
 		},
 		{
-			"name": "Sulu",
-			"scope": [
-				"entity.name.type",
-				"entity.name.class",
-				"entity.other.inherited-class",
-				"entity.other.attribute-name.id.css"
-			],
-			"settings": {
-				"foreground": "#97EE91"
-			}
-		},
-		{
 			"name": "Jaffa",
 			"scope": [
 				"beginning.punctuation.definition.list.markdown",
@@ -450,6 +442,29 @@
 			],
 			"settings": {
 				"foreground": "#F39B35"
+			}
+		},
+		{
+			"name": "Anakiwa",
+			"scope": [
+				"meta.link.inline.markdown",
+				"meta.image.inline.markdown",
+				"markup.underline.link"
+			],
+			"settings": {
+				"foreground": "#99ddff"
+			}
+		},
+		{
+			"scope": "Cornflower Blue",
+			"settings": {
+				"foreground": "#6796e6"
+			}
+		},
+		{
+			"scope": "Manhattan",
+			"settings": {
+				"foreground": "#f2c88c"
 			}
 		},
 		{
@@ -491,41 +506,6 @@
 			],
 			"settings": {
 				"fontStyle": "underline"
-			}
-		},
-		{
-			"name": "Anakiwa",
-			"scope": [
-				"meta.link.inline.markdown",
-				"meta.image.inline.markdown",
-				"markup.underline.link"
-			],
-			"settings": {
-				"foreground": "#99ddff"
-			}
-		},
-		{
-			"scope": "Cornflower Blue",
-			"settings": {
-				"foreground": "#6796e6"
-			}
-		},
-		{
-			"scope": "Manhattan",
-			"settings": {
-				"foreground": "#f2c88c"
-			}
-		},
-		{
-			"name": "CSS Punctuation",
-			"scope": [
-				"punctuation.section.function.begin.bracket.round.css",
-				"punctuation.section.function.end.bracket.round.css",
-				"punctuation.section.property-list.begin.bracket.curly.css",
-				"punctuation.section.property-list.end.bracket.curly.css"
-			],
-			"settings": {
-				"foreground": "#d6d6ea"
 			}
 		}
 	]
