@@ -10,6 +10,11 @@
     "categories": [
         "Themes"
     ],
+    "icon": "images/icon.png",
+    "gallerBanner": {
+        "color": "#27273A",
+        "theme": "dark"
+    },
     "contributes": {
         "themes": [
             {
@@ -24,7 +29,6 @@
             }
         ]
     },
-    "icon": "images/icon.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/eating-coleslaw/vscode-nebula-theme"
