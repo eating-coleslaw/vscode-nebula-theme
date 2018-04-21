@@ -1,18 +1,19 @@
 //import { IconConfiguration, IconPack, IconJsonOptions } from '../../models/index';
 //import { getFileIconDefinitions, getFolderIconDefinitions, getLanguageIconDefinitions, generateFolderIcons } from './index';
-//import { fileIcons } from '../fileIcons';
-//import { folderIcons } from '../folderIcons';
+import { vscElements } from '../vscColors';
+import { tokenGroups } from '../tokenGroups';
 //import { languageIcons } from '../languageIcons';
 import { iconJsonName } from './constants';
 import * as merge from 'lodash.merge';
+import { ThemeJsonOptions, ThemeConfiguration } from '../../models';
 //import * as path from 'path';
 //import * as fs from 'fs';
 
 /**
- * Generate the complete icon configuration object that can be written as JSON file.
+ * Generate the complete theme configuration object that can be written as JSON file.
  */
-export const generateIconConfigurationObject = (options: IconJsonOptions): IconConfiguration => {
-    const iconConfig = merge({}, new IconConfiguration(), { options });
+export const generateThemeConfigurationObject = (options: ThemeJsonOptions): ThemeConfiguration => {
+    const themeConfig = merge({}, new ThemeConfiguration(), { options });
     const languageIconDefinitions = getLanguageIconDefinitions(languageIcons, iconConfig, options);
     const fileIconDefinitions = getFileIconDefinitions(fileIcons, iconConfig, options);
     const folderIconDefinitions = getFolderIconDefinitions(folderIcons, iconConfig, options);
