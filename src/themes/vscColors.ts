@@ -1,6 +1,6 @@
 import { VscElement } from '../models/index';
 
-export const vscElements: VscElement[] = [
+export const workspaceColors: VscElement[] = [
 		{
 			name: 'General',
 			vscColors: [

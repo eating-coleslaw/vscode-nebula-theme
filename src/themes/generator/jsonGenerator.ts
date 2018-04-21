@@ -1,6 +1,6 @@
 //import { IconConfiguration, IconPack, IconJsonOptions } from '../../models/index';
 //import { getFileIconDefinitions, getFolderIconDefinitions, getLanguageIconDefinitions, generateFolderIcons } from './index';
-import { vscElements } from '../vscColors';
+import { workspaceColors } from '../vscColors';
 import { tokenGroups } from '../tokenGroups';
 //import { languageIcons } from '../languageIcons';
 import { themeJsonName } from './constants';
@@ -14,7 +14,7 @@ import * as fs from 'fs';
  */
 export const generateThemeConfigurationObject = (options: ThemeJsonOptions): ThemeConfiguration => {
     const themeConfig = merge({}, new ThemeConfiguration(), { options });
-    const languageIconDefinitions = getLanguageIconDefinitions(languageIcons, themeConfig, options);
+    const languageIconDefinitions = getLanguageIconDefinitions(workspaceColors, themeConfig, options);
     const fileIconDefinitions = getFileIconDefinitions(fileIcons, iconConfig, options);
     const folderIconDefinitions = getFolderIconDefinitions(folderIcons, iconConfig, options);
 

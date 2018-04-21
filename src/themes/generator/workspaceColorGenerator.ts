@@ -1,11 +1,11 @@
-import { VscElement, ThemeConfiguration, VscColor, ThemeJsonOptions } from '../../models/index';
+import { VscElement, ThemeConfiguration, ThemeJsonOptions } from '../../models/index';
 //import { iconFolderPath, lightVersion, highContrastVersion } from './constants';
 import * as merge from 'lodash.merge';
 
 /**
  * Get all file icons that can be used in this theme.
  */
-export const getVscColorDefinitions = (fileIcons: VscElement, config: ThemeConfiguration, options: ThemeJsonOptions): ThemeConfiguration => {
+export const getWorkspaceColorDefinitions = (fileIcons: VscElement, config: ThemeConfiguration, options: ThemeJsonOptions): ThemeConfiguration => {
     config = merge({}, config);
     const enabledIcons = disableIconsByPack(fileIcons, options.activeIconPack);
     const customIcons = getCustomIcons(options.files.associations);
