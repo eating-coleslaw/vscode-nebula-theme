@@ -12,7 +12,13 @@
             "runtimeExecutable": "${execPath}",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}"
-            ]
+            ],
+            "outFiles": [
+                "${workspaceFolder}/out/**/*.js"
+            ],
+            "smartStep": true,
+            "sourceMaps": true,
+            "preLaunchTask": "npm: build"
         }
     ]
 }
