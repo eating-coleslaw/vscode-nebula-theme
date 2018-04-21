@@ -3,18 +3,18 @@
 import { vscElements } from '../vscColors';
 import { tokenGroups } from '../tokenGroups';
 //import { languageIcons } from '../languageIcons';
-import { iconJsonName } from './constants';
+import { themeJsonName } from './constants';
 import * as merge from 'lodash.merge';
-import { ThemeJsonOptions, ThemeConfiguration } from '../../models';
-//import * as path from 'path';
-//import * as fs from 'fs';
+import { ThemeJsonOptions, ThemeConfiguration, ItalicsTheme } from '../../models';
+import * as path from 'path';
+import * as fs from 'fs';
 
 /**
  * Generate the complete theme configuration object that can be written as JSON file.
  */
 export const generateThemeConfigurationObject = (options: ThemeJsonOptions): ThemeConfiguration => {
     const themeConfig = merge({}, new ThemeConfiguration(), { options });
-    const languageIconDefinitions = getLanguageIconDefinitions(languageIcons, iconConfig, options);
+    const languageIconDefinitions = getLanguageIconDefinitions(languageIcons, themeConfig, options);
     const fileIconDefinitions = getFileIconDefinitions(fileIcons, iconConfig, options);
     const folderIconDefinitions = getFolderIconDefinitions(folderIcons, iconConfig, options);
 
@@ -22,23 +22,23 @@ export const generateThemeConfigurationObject = (options: ThemeJsonOptions): The
 };
 
 /**
- * Create the JSON file that is responsible for the icons in the editor.
+ * Create the JSON file that is responsible for the theme's appearance in the editor.
  */
-export const createIconFile = (jsonOptions?: IconJsonOptions): Promise<string> => {
+export const createIconFile = (jsonOptions?: ThemeJsonOptions): Promise<string> => {
     // override the default options with the new options
-    const options = merge({}, getDefaultIconOptions(), jsonOptions);
+    const options = merge({}, getDefaultThemeOptions(), jsonOptions);
 
-    const iconJSONPath = path.join(__dirname, '../../../', 'src', iconJsonName);
-    const json = generateIconConfigurationObject(options);
+    const themeJsonPath = path.join(__dirname, '../../../', 'src', themeJsonName);
+    const json = generateThemeConfigurationObject(options);
 
     return new Promise((resolve, reject) => {
-        fs.writeFile(iconJSONPath, JSON.stringify(json, undefined, 2), (err) => {
+        fs.writeFile(themeJsonPath, JSON.stringify(json, undefined, 2), (err) => {
             if (err) {
                 reject(err);
             }
             if (options.folders.color) {
                 generateFolderIcons(options.folders.color).catch(e => reject(e)).then(() => {
-                    resolve(iconJsonName);
+                    resolve(themeJsonName);
                 });
             }
         });
@@ -46,16 +46,10 @@ export const createIconFile = (jsonOptions?: IconJsonOptions): Promise<string> =
 };
 
 /**
- * The options control the generator and decide which icons are disabled or not.
+ * The options control the generator and decide which @TODO: finish description
  */
-export const getDefaultIconOptions = (): IconJsonOptions => ({
-    folders: {
-        theme: 'specific',
-        color: '#90a4ae',
-        associations: {},
-    },
-    activeIconPack: 'angular',
-    hidesExplorerArrows: false,
-    files: { associations: {} },
-    languages: { associations: {} },
+export const getDefaultThemeOptions = (): ThemeJsonOptions => ({
+    commentItalics: true,
+	themeItalics: ItalicsTheme.Basic,
+	materialize: false
 });

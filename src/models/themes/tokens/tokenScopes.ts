@@ -1,6 +1,6 @@
 import{ TokenStyle } from './token';
 
-export interface TokenGroup {
+export interface ITokenGroup {
 
 	name: string;
 

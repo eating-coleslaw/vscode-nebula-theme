@@ -1,6 +1,6 @@
-import { TokenGroup, ItalicsTheme, FontStyle } from '../models/index';
+import { ITokenGroup, ItalicsTheme, FontStyle } from '../models/index';
 
-export const tokenGroups: TokenGroup[] = [
+export const tokenGroups: ITokenGroup[] = [
 	{ 
 		name: 'Magnolia',
 		scopes: [

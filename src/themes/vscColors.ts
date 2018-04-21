@@ -1,4 +1,4 @@
-import { VscElement, ItalicsTheme } from '../models/index';
+import { VscElement } from '../models/index';
 
 export const vscElements: VscElement[] = [
 		{
@@ -289,4 +289,4 @@ export const vscElements: VscElement[] = [
 				{ scope: 'gitDecoration.ignoredResourceForeground', color: '#919CB9af' }
 			]
 		}
-]
+];
