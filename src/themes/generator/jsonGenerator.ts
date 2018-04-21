@@ -14,7 +14,7 @@ import * as fs from 'fs';
  */
 export const generateThemeConfigurationObject = (options: ThemeJsonOptions): ThemeConfiguration => {
     const themeConfig = merge({}, new ThemeConfiguration(), { options });
-    const languageIconDefinitions = getLanguageIconDefinitions(workspaceColors, themeConfig, options);
+    const languageIconDefinitions = getWorkspaceColorDefinitions(workspaceColors, themeConfig, options);
     const fileIconDefinitions = getFileIconDefinitions(fileIcons, iconConfig, options);
     const folderIconDefinitions = getFolderIconDefinitions(folderIcons, iconConfig, options);
 

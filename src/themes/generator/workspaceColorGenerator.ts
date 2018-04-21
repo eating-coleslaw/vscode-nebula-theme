@@ -1,36 +1,28 @@
-import { VscElement, ThemeConfiguration, ThemeJsonOptions } from '../../models/index';
+import { IWorkspaceColor, ThemeConfiguration, ThemeJsonOptions } from '../../models/index';
+import { workspaceColors } from '../workspaceColors';
 //import { iconFolderPath, lightVersion, highContrastVersion } from './constants';
 import * as merge from 'lodash.merge';
 
 /**
  * Get all file icons that can be used in this theme.
  */
-export const getWorkspaceColorDefinitions = (fileIcons: VscElement, config: ThemeConfiguration, options: ThemeJsonOptions): ThemeConfiguration => {
+export const getWorkspaceColorDefinitions = (wsColors: IWorkspaceColor[], config: ThemeConfiguration, options: ThemeJsonOptions): ThemeConfiguration => {
     config = merge({}, config);
-    const enabledIcons = disableIconsByPack(fileIcons, options.activeIconPack);
-    const customIcons = getCustomIcons(options.files.associations);
-    const allFileIcons = [...enabledIcons, ...customIcons];
 
-    allFileIcons.forEach(icon => {
-        if (icon.disabled) return;
-        config = merge({}, config, setIconDefinition(icon.name));
-
-        if (icon.light) {
-            config = merge({}, config, setIconDefinition(icon.name, lightVersion));
-        }
-        if (icon.highContrast) {
-            config = merge({}, config, setIconDefinition(icon.name, highContrastVersion));
-        }
-
-        if (icon.fileExtensions) {
-            config = merge({}, config, mapSpecificFileIcons(icon, FileMappingType.FileExtensions));
-        }
-        if (icon.fileNames) {
-            config = merge({}, config, mapSpecificFileIcons(icon, FileMappingType.FileNames));
-        }
+    wsColors.forEach(wsColor => {
+        let setColor: string;
+        if (options.materialize) { setColor = NamedColor.Transparent; }
+        else { setColor = wsColors.color; }
+        config = merge({}, config, setColorDefinition(wsColor.scope, setColor));
     });
 
     return config;
+};
+
+const setColorDefinition = (wsScope: string, color: string = NamedColor.Transparent) => {
+    const obj = { colors: {} };
+    obj.colors[`${wsScope}`] = `${color}`;
+    return obj;
 };
 
 /**
@@ -86,3 +78,7 @@ const enum FileMappingType {
     FileExtensions = 'fileExtensions',
     FileNames = 'fileNames'
 }
+
+const enum NamedColor {
+    Transparent = '#0000'
+} 
