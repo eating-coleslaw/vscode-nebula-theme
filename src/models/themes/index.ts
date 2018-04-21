@@ -1,4 +1,3 @@
-export * from './advancedWorkspaceConfiguration';
 export * from './colors';
 export * from './tokens';
 export * from './fontStyle';

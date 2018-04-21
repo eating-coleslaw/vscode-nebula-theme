@@ -7,6 +7,6 @@ export interface TokenStyle {
 
 	fontStyle?: FontStyle;
 
-	italicThemes?: ItalicsTheme[];
+	excludeIn?: ItalicsTheme[];
 
 }
