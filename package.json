@@ -1,7 +1,7 @@
 {
     "name": "nebula-theme",
     "displayName": "Nebula Theme",
-    "description": "Fresh colors on a dark, cold slate. An almost-material theme for Visual Studio Code.",
+    "description": "🌌🌸 Fresh colors on a dark, cold slate. An almost-material theme for Visual Studio Code.",
     "version": "1.0.5",
     "publisher": "ChirtleLovesDolls",
     "engines": {
@@ -27,7 +27,31 @@
                 "uiTheme": "vs-dark",
                 "path": "./themes/Nebula-color-theme-console.json"
             }
-        ]
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Nebula Theme Configuration",
+            "properties": {
+                "nebula-theme.commentItalics": {
+                    "type": "boolean",
+                    "defualt": true
+                },
+                "nebula-theme.themeItalics": {
+                    "type": "string",
+                    "default": "basic",
+                    "enum": [
+                        "none",
+                        "basic",
+                        "more",
+                        "operator"
+                    ]
+                },
+                "nebula-theme.materialize": {
+                    "type": "boolean",
+                    "defualt": false
+                }
+            }
+        }
     },
     "repository": {
         "type": "git",
