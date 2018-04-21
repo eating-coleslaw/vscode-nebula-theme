@@ -1,10 +1,10 @@
+out
+node_modules
+.vscode-test/
+*.vsix
 vsc-extension-quickstart.md
-CHANGELOG.md
-vsc-extension-quickstart.md
+
 *.7z
 *.zip
 python.python
 Archive/
-
-node_modules
-*.vsix
