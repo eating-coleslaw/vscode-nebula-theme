@@ -17,11 +17,21 @@
         "theme": "dark"
     },
     "scripts": {
-        "vscode:prepublish": "npm run compile",
+        "vscode:prepublish": "npm run build",
+        "prebuild": "npm run lint && npm run clean",
+        "build": "npm run compile && npm run generateJson",
+        "postbuild": "npm run check",
+        "clean": "rimraf ./out",
+        "compile:watch": "tsc -watch -p ./",
+        "generateJson": "ts-node ./scripts/icons/generateJson.ts",
+        "check": "ts-node scripts/icons/checks",
+        "lint": "tslint -c tslint.json ./src/**/*.ts ./scripts/**/*ts",
+        "pretest": "npm run build",
+        "test": "node ./node_modules/vscode/bin/test",
+        "preview": "npm run build && ts-node ./scripts/preview",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+        "postinstall": "node ./node_modules/vscode/bin/install"
     },
     "devDependencies": {
         "typescript": "^2.6.1",

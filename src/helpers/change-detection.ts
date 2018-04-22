@@ -1,8 +1,7 @@
 //import * as vscode from 'vscode';
-//import { createIconFile } from '../icons/index';
+import { createThemeFile } from '../themes/index';
 import { getObjectPropertyValue, setObjectPropertyValue } from './objects';
-import { getExtensionConfiguration, promptToReload, getMaterialIconsJSON, getThemeConfig } from '.';
-import { createThemeFile } from '../themes/generator/jsonGenerator';
+import { getExtensionConfiguration, promptToReload, getColorThemeJson, getThemeConfig } from '.';
 
 /** Compare the workspace and the user configurations with the current setup of the icons. */
 export const detectConfigChanges = () => {
@@ -36,7 +35,7 @@ const compareConfigs = (configs: string[]): Promise<{ [name: string]: any }> => 
 	/* 
 	 * TODO: Update for Nebula
 	*/
-    return getMaterialIconsJSON().then(json => {
+    return getColorThemeJson().then(json => {
         configs.forEach(configName => {
             // no further actions (e.g. reload) required
             if (/show(Welcome|Update|Reload)Message/g.test(configName)) { return; }

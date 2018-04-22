@@ -59,7 +59,7 @@ export const getTranslationValue = (key: string, translations = currentTranslati
 export const translate = (key: string, words?: string | string[]) => {
     const translation = <string>getTranslationValue(key);
 
-    if (!words) return translation;
+    if (!words) { return translation; }
     return replace(translation, words);
 };
 

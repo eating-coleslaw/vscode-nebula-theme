@@ -1,3 +1,3 @@
 export * from './tokenGroups';
-export * from './vscColors';
 export * from './generator';
+export * from './workspaceColors';
