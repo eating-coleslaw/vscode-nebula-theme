@@ -3,6 +3,7 @@ import * as versioning from './../helpers/versioning';
 import * as vscode from 'vscode';
 import * as opn from 'opn';
 import * as i18n from './../i18N';
+import { activateColorTheme } from '../commands/activate';
 
 /** Show the welcome message if the icon theme has been installed the first time. */
 export const showWelcomeMessage = () => {
@@ -24,7 +25,7 @@ export const showWelcomeMessage = () => {
 const handleWelcomeMessageActions = (value) => {
     switch (value) {
         case i18n.translate('activate'):
-            activateIconTheme();
+            activateColorTheme();
             break;
 
         case i18n.translate('howToActivate'):
