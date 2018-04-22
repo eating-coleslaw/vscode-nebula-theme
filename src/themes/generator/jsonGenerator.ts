@@ -1,7 +1,8 @@
 //import { IconConfiguration, IconPack, IconJsonOptions } from '../../models/index';
 //import { getFileIconDefinitions, getFolderIconDefinitions, getLanguageIconDefinitions, generateFolderIcons } from './index';
-import { workspaceColors } from '../vscColors';
+import { workspaceColors } from '../workspaceColors';
 import { tokenGroups } from '../tokenGroups';
+import { getWorkspaceColorDefinitions } from './workspaceColorGenerator';
 //import { languageIcons } from '../languageIcons';
 import { themeJsonName } from './constants';
 import * as merge from 'lodash.merge';
@@ -14,11 +15,13 @@ import * as fs from 'fs';
  */
 export const generateThemeConfigurationObject = (options: ThemeJsonOptions): ThemeConfiguration => {
     const themeConfig = merge({}, new ThemeConfiguration(), { options });
-    const languageIconDefinitions = getWorkspaceColorDefinitions(workspaceColors, themeConfig, options);
+    const workspaceColorDefinitions = getWorkspaceColorDefinitions(workspaceColors, themeConfig, options);
+    const tokenColorDefinitions = 
+
     const fileIconDefinitions = getFileIconDefinitions(fileIcons, iconConfig, options);
     const folderIconDefinitions = getFolderIconDefinitions(folderIcons, iconConfig, options);
 
-    return merge({}, languageIconDefinitions, fileIconDefinitions, folderIconDefinitions);
+    return merge({}, workspaceColorDefinitions, fileIconDefinitions, folderIconDefinitions);
 };
 
 /**

@@ -3,7 +3,7 @@ import { ITokenGroup, ItalicsTheme, FontStyle } from '../models/index';
 export const tokenGroups: ITokenGroup[] = [
 	{ 
 		name: 'Magnolia',
-		scopes: [
+		scope: [
 			"meta.brace",
 			"punctuation.definition.array",
 			"punctuation.definition.binding-pattern",
@@ -20,13 +20,13 @@ export const tokenGroups: ITokenGroup[] = [
 			"meta.structure.dictionary.json",
 			"string.quoted.double.json"
 		],
-		style: {
+		settings: {
 			foreground: '#F6F0FF'
 		},
 	},
 	{ 
 		name: 'Electric Blue',
-		scopes: [
+		scope: [
 			"support.variable",
 			"variable",
 			"support.type.property-name",
@@ -35,13 +35,13 @@ export const tokenGroups: ITokenGroup[] = [
 			"meta.object-literal.key.js",
 			"string.other.link.description.markdown"
 		],
-		style: {
+		settings: {
 			foreground: '#8DF9F9'
 		},
 	},
 	{ 
 		name: 'Sulu',
-		scopes: [
+		scope: [
 			"keyword.var",
 			"keyword.const",
 			"constant",
@@ -62,35 +62,35 @@ export const tokenGroups: ITokenGroup[] = [
 			"entity.other.inherited-class",
 			"entity.other.attribute-name.id.css"
 		],
-		style: {
+		settings: {
 			foreground: '#97EE91'
 		},
 	},
 	{ 
 		name: 'Bali Hai',
-		scopes: [
+		scope: [
 			"punctuation.terminator",
 			"punctuation.section.function.begin.bracket.round.css",
 			"punctuation.section.function.end.bracket.round.css",
 			"punctuation.section.property-list.begin.bracket.curly.css",
 			"punctuation.section.property-list.end.bracket.curly.css"
 		],
-		style: {
+		settings: {
 			foreground: '#919CB9'
 		},
 	},
 	{ 
 		name: 'Deluge',
-		scopes: [
+		scope: [
 			"comment"
 		],
-		style: {
+		settings: {
 			foreground: '#8059A2'
 		},
 	},
 	{ 
 		name: 'Malibu',
-		scopes: [
+		scope: [
 			"string",
 			"markup.quote",
 			"markup.bold",
@@ -102,25 +102,25 @@ export const tokenGroups: ITokenGroup[] = [
 			"markup.underline.link",
 			"entity.name.type.js"
 		],
-		style: {
+		settings: {
 			foreground: '#50DFFE'
 		},
 	},
 	{ 
 		name: 'Mauve',
-		scopes: [
+		scope: [
 			"string.quoted.docstring",
 			"storage.type.function",
 			"keyword.type",
 			"storage.type"
 		],
-		style: {
+		settings: {
 			foreground: '#E7ADFB'
 		},
 	},
 	{ 
 		name: 'Froly',
-		scopes: [
+		scope: [
 			"entity.name.class",
 			"entity.name.function",
 			"entity.name.type",
@@ -131,13 +131,13 @@ export const tokenGroups: ITokenGroup[] = [
 			"support.function",
 			"support.other.escape.special.regexp"
 		],
-		style: {
+		settings: {
 			foreground: '#F36F98'
 		},
 	},
 	{ 
 		name: 'Rajah',
-		scopes: [
+		scope: [
 			"entity.name.tag",
 			"storage",
 			"support.function.builtin",
@@ -150,13 +150,13 @@ export const tokenGroups: ITokenGroup[] = [
 			"string.quoted.double.css",
 			"punctuation.definition.string.css"
 		],
-		style: {
+		settings: {
 			foreground: '#F8C275'
 		},
 	},
 	{ 
 		name: 'Deep Blush',
-		scopes: [
+		scope: [
 			"entity.name.section",
 			"keyword",
 			"punctuation.definition.heading",
@@ -165,13 +165,13 @@ export const tokenGroups: ITokenGroup[] = [
 			"constant.character.escape.markdown",
 			"entity.other.attribute-name.class.css"
 		],
-		style: {
+		settings: {
 			foreground: '#E752A1'
 		},
 	},
 	{ 
 		name: 'Classic Rose',
-		scopes: [
+		scope: [
 			"meta.brace",
 			"punctuation.definition.arguments",
 			"punctuation.definition.array",
@@ -196,13 +196,13 @@ export const tokenGroups: ITokenGroup[] = [
 			"variable.other.object",
 			"constant.other.database-name.sql"
 		],
-		style: {
+		settings: {
 			foreground: 'FBD3E1#'
 		},
 	},
 	{ 
 		name: 'Cranberry',
-		scopes: [
+		scope: [
 			"punctuation.definition.template-expression",
 			"punctuation.section.embedded",
 			"storage",
@@ -211,13 +211,13 @@ export const tokenGroups: ITokenGroup[] = [
 			"entity.name.section.markdown",
 			"token.error-token"
 		],
-		style: {
+		settings: {
 			foreground: '#E34F8C'
 		},
 	},
 	{ 
 		name: 'Texas',
-		scopes: [
+		scope: [
 			"markup.changed",
 			"entity.name.filename.find-in-files",
 			"markup.quote",
@@ -226,13 +226,13 @@ export const tokenGroups: ITokenGroup[] = [
 			"keyword.other.unit.s.css",
 			"keyword.other.unit.percentage.css"
 		],
-		style: {
+		settings: {
 			foreground: '#FAFAA0'
 		},
 	},
 	{ 
 		name: 'Perfume',
-		scopes: [
+		scope: [
 			"markup.fenced_code.block.markdown",
 			"keyword.type",
 			"keyword.other.alias.sql",
@@ -240,58 +240,58 @@ export const tokenGroups: ITokenGroup[] = [
 			"variable.argument.css",
 			"constant.numeric.line-number.find-in-files - match"
 		],
-		style: {
+		settings: {
 			foreground: '#C7ADFB'
 		},
 	},
 	{ 
 		name: 'White Pointer',
-		scopes: [
+		scope: [
 			"variable",
 			"text.html.markdown",
 			"support.constant.property-value.css"
 		],
-		style: {
+		settings: {
 			foreground: '#FCF6FF'
 		},
 	},
 	{ 
 		name: 'Jaffa',
-		scopes: [
+		scope: [
 			"beginning.punctuation.definition.list.markdown",
 			"constant.language.null",
 			"constant.language.boolean.true",
 			"constant.language.boolean.false",
 			"entity.other.attribute-name.pseudo-element.css"
 		],
-		style: {
+		settings: {
 			foreground: '#F39B35'
 		},
 	},
 	{ 
 		name: 'Anakiwa',
-		scopes: [
+		scope: [
 			"meta.link.inline.markdown",
 			"meta.image.inline.markdown",
 			"markup.underline.link"
 		],
-		style: {
+		settings: {
 			foreground: '#99ddff'
 		},
 	},
 	{
 		name: 'Bold',
-		scopes: [
+		scope: [
 			"markup.bold.markdown",
 			"punctuation.definition.bold.markdown"
 		],
-		style: {
-			fontStyle: FontStyle.Bold
+		settings: {
+			fontsettings: FontStyle.Bold
 		}
 	},
 	{
 		name: 'Underline',
-		scopes: [
+		scope: [
 			"entity.other.inherited-class",
 			"entity.name.type",
 			"entity.name.class",
@@ -300,7 +300,7 @@ export const tokenGroups: ITokenGroup[] = [
 	},
 	{
 		name: 'Basic Italics',
-		scopes: [
+		scope: [
 			"markup.italic.markdown",
 			"punctuation.definition.italic.markdown",
 			"storage.type.function",
@@ -312,8 +312,8 @@ export const tokenGroups: ITokenGroup[] = [
 			"string.quoted.double.css",
 			"punctuation.definition.string.css"
 		],
-		style: {
-			fontStyle: FontStyle.Italics,
+		settings: {
+			fontsettings: FontStyle.Italics,
 			excludeIn: [
 				ItalicsTheme.None
 			]
@@ -321,9 +321,9 @@ export const tokenGroups: ITokenGroup[] = [
 	},
 	{
 		name: 'More Italics',
-		scopes: [],
-		style: {
-			fontStyle: FontStyle.Italics,
+		scope: [],
+		settings: {
+			fontsettings: FontStyle.Italics,
 			excludeIn: [ 
 				ItalicsTheme.None,
 				ItalicsTheme.Basic
@@ -332,9 +332,9 @@ export const tokenGroups: ITokenGroup[] = [
 	},
 	{
 		name: 'Operator Italics',
-		scopes: [],
-		style: {
-			fontStyle: FontStyle.Italics,
+		scope: [],
+		settings: {
+			fontsettings: FontStyle.Italics,
 			excludeIn: [
 				ItalicsTheme.None,
 				ItalicsTheme.Basic,

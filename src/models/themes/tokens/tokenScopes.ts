@@ -2,10 +2,10 @@ import{ TokenStyle } from './token';
 
 export interface ITokenGroup {
 
-	name: string;
+	name?: string;
 
-	scopes?: string[];
+	scope?: string[];
 
-	style?: TokenStyle;
+	settings?: TokenStyle;
 
 }
