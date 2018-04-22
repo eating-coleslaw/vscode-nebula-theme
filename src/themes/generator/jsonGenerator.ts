@@ -16,6 +16,7 @@ export const createThemeFile = (jsonOptions?: ThemeJsonOptions): Promise<string>
     const options = merge({}, getDefaultThemeOptions(), jsonOptions);
 
     const themeJsonPath = path.join(__dirname, '../../../', 'src', themeJsonName);
+    console.log(themeJsonPath);
     const json = generateThemeConfigurationObject(options);
 
     return new Promise((resolve, reject) => {

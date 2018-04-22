@@ -4,14 +4,16 @@
 		"module": "commonjs",
 		"sourceMap": true,
 		"outDir": "out",
-		"rootDir": "src",
+		"rootDir": ".",
 		"noUnusedLocals": true, /* Report errors on unused locals. */
 		"lib": [
-			"es6"
+			"es6",
+			"dom"
 		]
 	},
 	"exclude": [
 		"node_modules",
-		".vscode-test"
+		".vscode-test",
+		"scripts"
 	]
 }

@@ -7,3 +7,11 @@ tsconfig.json
 .gitignore
 vsc-extension-quickstart.md
 tslint.json
+
+out/previews/**
+test/**
+scripts/**
+**/*.map
+.bithoundrc
+images/**
+package-lock.json

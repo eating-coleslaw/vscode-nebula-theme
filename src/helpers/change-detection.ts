@@ -14,6 +14,7 @@ export const detectConfigChanges = () => {
 		/* update icon json file with new options
 		*  TODO: Update for Nebula
 		*/
+        console.log(updatedOptions);
         return createThemeFile(updatedOptions).then(() => {
             promptToReload();
         }).catch(err => {

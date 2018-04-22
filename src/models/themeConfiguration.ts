@@ -1,24 +1,17 @@
 import { ThemeJsonOptions, FontStyle } from './index';
 
 export class ThemeConfiguration {
-	colors?: { [s: string]: string; }; /* VscElement[]; */
+	colors?: { [s: string]: string; };
 	name?: string;
 	scope?: string[];
 	settings?: ITokenColorSettings;
-	/* tokenColors: TokenGroup[]; */
-	tokenColors: ITokenColorDefinition[]; //ThemeConfiguration[];
+	tokenColors: ITokenColorDefinition[];
 	options?: ThemeJsonOptions;
-	italics?: ITokenColorDefinition;
 
 	constructor() {
 		this.colors = {};
 		this.tokenColors = [];
 		this.options = {};
-		this.italics = {
-			name: 'italics',
-			scope: [],
-			settings: { fontStyle: FontStyle.Italics }
-		};
 	}
 }
 
