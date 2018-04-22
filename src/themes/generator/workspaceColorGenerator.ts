@@ -1,6 +1,5 @@
 import { IWorkspaceColor, ThemeConfiguration, ThemeJsonOptions } from '../../models/index';
 import { workspaceColors } from '../workspaceColors';
-//import { iconFolderPath, lightVersion, highContrastVersion } from './constants';
 import * as merge from 'lodash.merge';
 
 /**

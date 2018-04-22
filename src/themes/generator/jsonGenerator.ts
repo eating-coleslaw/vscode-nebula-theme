@@ -1,33 +1,17 @@
-//import { IconConfiguration, IconPack, IconJsonOptions } from '../../models/index';
-//import { getFileIconDefinitions, getFolderIconDefinitions, getLanguageIconDefinitions, generateFolderIcons } from './index';
 import { workspaceColors } from '../workspaceColors';
 import { tokenGroups } from '../tokenGroups';
 import { getWorkspaceColorDefinitions } from './workspaceColorGenerator';
-//import { languageIcons } from '../languageIcons';
 import { themeJsonName } from './constants';
 import * as merge from 'lodash.merge';
 import { ThemeJsonOptions, ThemeConfiguration, ItalicsTheme } from '../../models';
 import * as path from 'path';
 import * as fs from 'fs';
-
-/**
- * Generate the complete theme configuration object that can be written as JSON file.
- */
-export const generateThemeConfigurationObject = (options: ThemeJsonOptions): ThemeConfiguration => {
-    const themeConfig = merge({}, new ThemeConfiguration(), { options });
-    const workspaceColorDefinitions = getWorkspaceColorDefinitions(workspaceColors, themeConfig, options);
-    const tokenColorDefinitions = 
-
-    const fileIconDefinitions = getFileIconDefinitions(fileIcons, iconConfig, options);
-    const folderIconDefinitions = getFolderIconDefinitions(folderIcons, iconConfig, options);
-
-    return merge({}, workspaceColorDefinitions, fileIconDefinitions, folderIconDefinitions);
-};
+import { getTokenStyleDefinitions } from './tokenGenerator';
 
 /**
  * Create the JSON file that is responsible for the theme's appearance in the editor.
  */
-export const createIconFile = (jsonOptions?: ThemeJsonOptions): Promise<string> => {
+export const createThemeFile = (jsonOptions?: ThemeJsonOptions): Promise<string> => {
     // override the default options with the new options
     const options = merge({}, getDefaultThemeOptions(), jsonOptions);
 
@@ -39,13 +23,19 @@ export const createIconFile = (jsonOptions?: ThemeJsonOptions): Promise<string> 
             if (err) {
                 reject(err);
             }
-            if (options.folders.color) {
-                generateFolderIcons(options.folders.color).catch(e => reject(e)).then(() => {
-                    resolve(themeJsonName);
-                });
-            }
         });
     });
+};
+
+/**
+ * Generate the complete theme configuration object that can be written as JSON file.
+ */
+export const generateThemeConfigurationObject = (options: ThemeJsonOptions): ThemeConfiguration => {
+    const themeConfig = merge({}, new ThemeConfiguration(), { options });
+    const workspaceColorDefinitions = getWorkspaceColorDefinitions(workspaceColors, themeConfig, options);
+    const tokenColorDefinitions = getTokenStyleDefinitions(tokenGroups, themeConfig, options);
+
+    return merge({}, workspaceColorDefinitions, tokenColorDefinitions);
 };
 
 /**

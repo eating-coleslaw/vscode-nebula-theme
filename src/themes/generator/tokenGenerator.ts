@@ -12,10 +12,6 @@ export const getTokenStyleDefinitions = (tokenColors: ITokenGroup[], config: The
 };
 
 const enableGroupsByThemeConfig = (tokenColors: ITokenGroup[], themeItalics: string): ITokenGroup[] => {
-	// const obj: ITokenGroup[] = [];
-	// tokenColors.forEach(group => {
-	// 	let exclusions = group.settings.excludeIn;
-	// })
 	return tokenColors.filter(group => {
 		let exclusions = group.settings.excludeIn;
 		return !exclusions ? true : exclusions.some(p => p === themeItalics);

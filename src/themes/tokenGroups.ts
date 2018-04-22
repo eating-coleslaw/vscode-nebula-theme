@@ -286,7 +286,7 @@ export const tokenGroups: ITokenGroup[] = [
 			"punctuation.definition.bold.markdown"
 		],
 		settings: {
-			fontsettings: FontStyle.Bold
+			fontStyle: FontStyle.Bold
 		}
 	},
 	{
@@ -313,7 +313,7 @@ export const tokenGroups: ITokenGroup[] = [
 			"punctuation.definition.string.css"
 		],
 		settings: {
-			fontsettings: FontStyle.Italics,
+			fontStyle: FontStyle.Italics,
 			excludeIn: [
 				ItalicsTheme.None
 			]
@@ -323,7 +323,7 @@ export const tokenGroups: ITokenGroup[] = [
 		name: 'More Italics',
 		scope: [],
 		settings: {
-			fontsettings: FontStyle.Italics,
+			fontStyle: FontStyle.Italics,
 			excludeIn: [ 
 				ItalicsTheme.None,
 				ItalicsTheme.Basic
@@ -334,7 +334,7 @@ export const tokenGroups: ITokenGroup[] = [
 		name: 'Operator Italics',
 		scope: [],
 		settings: {
-			fontsettings: FontStyle.Italics,
+			fontStyle: FontStyle.Italics,
 			excludeIn: [
 				ItalicsTheme.None,
 				ItalicsTheme.Basic,
