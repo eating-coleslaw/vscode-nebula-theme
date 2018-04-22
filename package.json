@@ -27,7 +27,6 @@
         "check": "ts-node scripts/themes/checks",
         "lint": "tslint -c tslint.json ./src/**/*.ts ./scripts/**/*ts",
         "pretest": "npm run build",
-        "test": "node ./node_modules/vscode/bin/test",
         "preview": "npm run build && ts-node ./scripts/preview",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
@@ -48,7 +47,7 @@
             {
                 "label": "Nebula - Console",
                 "uiTheme": "vs-dark",
-                "path": "./themes/Nebula-color-theme-console.json"
+                "path": "./out/src/Nebula-color-theme-console.json"
             }
         ],
         "commands": [
