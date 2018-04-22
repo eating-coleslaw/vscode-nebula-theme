@@ -23,8 +23,8 @@
         "postbuild": "npm run check",
         "clean": "rimraf ./out",
         "compile:watch": "tsc -watch -p ./",
-        "generateJson": "ts-node ./scripts/icons/generateJson.ts",
-        "check": "ts-node scripts/icons/checks",
+        "generateJson": "ts-node ./scripts/themes/generateJson.ts",
+        "check": "ts-node scripts/themes/checks",
         "lint": "tslint -c tslint.json ./src/**/*.ts ./scripts/**/*ts",
         "pretest": "npm run build",
         "test": "node ./node_modules/vscode/bin/test",
@@ -33,19 +33,17 @@
         "watch": "tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install"
     },
-    "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6",
-        "tslint": "^5.8.0",
-        "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
-    },
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/src/extension",
     "contributes": {
         "themes": [
             {
+                "id": "nebula-theme",
                 "label": "Nebula",
                 "uiTheme": "vs-dark",
-                "path": "./themes/Nebula-color-theme.json"
+                "path": "./out/src/Nebula-color-theme.json"
             },
             {
                 "label": "Nebula - Console",
@@ -55,12 +53,12 @@
         ],
         "commands": [
             {
-                "commands": "nebula-theme.activateTheme",
-                "title": "%command.activateIcons%"
+                "command": "nebula-theme.activateTheme",
+                "title": "Nebula Theme: Activate"
             },
             {
-                "commands": "nebula-theme.restoreDefaultConfig",
-                "title": "%command.restoreDefaultConfig%"
+                "command": "nebula-theme.restoreDefaultConfig",
+                "title": "Nebula Theme: Reset to default configuration"
             }
         ],
         "configuration": {
@@ -69,11 +67,13 @@
             "properties": {
                 "nebula-theme.commentItalics": {
                     "type": "boolean",
-                    "defualt": true
+                    "default": true,
+                    "description": "Does stuff"
                 },
                 "nebula-theme.themeItalics": {
                     "type": "string",
                     "default": "basic",
+                    "description": "Does stuff",
                     "enum": [
                         "none",
                         "basic",
@@ -83,7 +83,8 @@
                 },
                 "nebula-theme.materialize": {
                     "type": "boolean",
-                    "defualt": false
+                    "default": false,
+                    "description": "Does stuff"
                 }
             }
         }
@@ -97,6 +98,14 @@
     },
     "dependencies": {
         "lodash.merge": "^4.6.1",
-        "opn": "^5.3.0"
+        "opn": "^5.3.0",
+        "rimraf": "^2.6.2"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
     }
 }

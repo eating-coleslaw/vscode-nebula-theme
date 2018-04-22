@@ -1,4 +1,3 @@
-//import * as vscode from 'vscode';
 import { createThemeFile } from '../themes/index';
 import { getObjectPropertyValue, setObjectPropertyValue } from './objects';
 import { getExtensionConfiguration, promptToReload, getColorThemeJson, getThemeConfig } from '.';

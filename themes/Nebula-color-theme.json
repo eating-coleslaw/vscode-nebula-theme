@@ -1,6 +1,7 @@
 {
 	"name": "Nebula",
 	"type": "dark",
+	/*
 	"colors": {
 		"foreground": "#fcf6ff",
 		"errorForeground": "#E34F8C",
@@ -509,4 +510,5 @@
 			}
 		}
 	]
+	*/
 }

@@ -3,12 +3,12 @@ import { activateColorTheme } from './activate';
 import { restoreDefaultConfig } from './restoreConfig';
 
 // Activate theme
-const activateThemeCommand = vscode.commands.registerCommand('material-icon-theme.activateIcons', () => {
+const activateThemeCommand = vscode.commands.registerCommand('nebula-theme.activateTheme', () => {
     activateColorTheme();
 });
 
 // Reset config
-const restoreDefaultConfigCommand = vscode.commands.registerCommand('material-icon-theme.restoreDefaultConfig', () => {
+const restoreDefaultConfigCommand = vscode.commands.registerCommand('nebula-theme.restoreDefaultConfig', () => {
     restoreDefaultConfig();
 });
 

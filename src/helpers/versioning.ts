@@ -12,7 +12,7 @@ export enum ThemeStatus {
 export const checkThemeStatus = async (state: vscode.Memento) => {
     try {
         // get the version from the state
-        const stateVersion = await state.get('material-icon-theme.version');
+        const stateVersion = await state.get('nebula-theme.version');
         const packageVersion = getCurrentExtensionVersion();
 
         // check if the theme was used before
@@ -41,12 +41,12 @@ const themeIsAlreadyActivated = () => {
 
 /** Update the version number to the current version in the memento. */
 const updateExtensionVersionInMemento = async (state: vscode.Memento) => {
-    return await state.update('material-icon-theme.version', getCurrentExtensionVersion());
+    return await state.update('nebula-theme.version', getCurrentExtensionVersion());
 };
 
 /** Get the current version of the extension */
 const getCurrentExtensionVersion = (): string => {
-    return vscode.extensions.getExtension('PKief.material-icon-theme').packageJSON.version;
+    return vscode.extensions.getExtension('ChirtleLovesDolls.nebula-theme').packageJSON.version;
 };
 
 /**
