@@ -76,6 +76,7 @@
         "url": "https://github.com/eating-coleslaw/vscode-nebula-theme/issues"
     },
     "dependencies": {
-        "lodash.merge": "^4.6.1"
+        "lodash.merge": "^4.6.1",
+        "opn": "^5.3.0"
     }
 }

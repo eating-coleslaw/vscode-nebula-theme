@@ -2,7 +2,7 @@ import * as helpers from './../helpers';
 import * as versioning from './../helpers/versioning';
 import * as vscode from 'vscode';
 import * as opn from 'opn';
-import * as i18n from './../i18n';
+import * as i18n from './../i18N';
 
 /** Show the welcome message if the icon theme has been installed the first time. */
 export const showWelcomeMessage = () => {

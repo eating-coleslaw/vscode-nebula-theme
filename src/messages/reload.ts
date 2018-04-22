@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import * as i18n from './../i18n';
+import * as i18n from './../i18N';
 import * as helpers from './../helpers';
 
 /** User has to confirm if he wants to reload the editor */
