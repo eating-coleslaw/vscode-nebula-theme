@@ -2,6 +2,7 @@
 //import { createIconFile } from '../icons/index';
 import { getObjectPropertyValue, setObjectPropertyValue } from './objects';
 import { getExtensionConfiguration, promptToReload, getMaterialIconsJSON, getThemeConfig } from '.';
+import { createThemeFile } from '../themes/generator/jsonGenerator';
 
 /** Compare the workspace and the user configurations with the current setup of the icons. */
 export const detectConfigChanges = () => {
@@ -10,12 +11,12 @@ export const detectConfigChanges = () => {
 
     return compareConfigs(configs).then(updatedOptions => {
         // if there's nothing to update
-        if (!updatedOptions) return;
+        if (!updatedOptions) { return; }
 
 		/* update icon json file with new options
 		*  TODO: Update for Nebula
 		*/
-        return createIconFile(updatedOptions).then(() => {
+        return createThemeFile(updatedOptions).then(() => {
             promptToReload();
         }).catch(err => {
             console.error(err);
@@ -38,7 +39,7 @@ const compareConfigs = (configs: string[]): Promise<{ [name: string]: any }> => 
     return getMaterialIconsJSON().then(json => {
         configs.forEach(configName => {
             // no further actions (e.g. reload) required
-            if (/show(Welcome|Update|Reload)Message/g.test(configName)) return;
+            if (/show(Welcome|Update|Reload)Message/g.test(configName)) { return; }
 
             const configValue = getThemeConfig(configName).globalValue;
             const currentState = getObjectPropertyValue(json.options, configName);
