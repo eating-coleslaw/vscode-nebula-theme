@@ -43,6 +43,16 @@
                 "path": "./themes/Nebula-color-theme-console.json"
             }
         ],
+        "commands": [
+            {
+                "commands": "nebula-theme.activateTheme",
+                "title": "%command.activateIcons%"
+            },
+            {
+                "commands": "nebula-theme.restoreDefaultConfig",
+                "title": "%command.restoreDefaultConfig%"
+            }
+        ],
         "configuration": {
             "type": "object",
             "title": "Nebula Theme Configuration",
