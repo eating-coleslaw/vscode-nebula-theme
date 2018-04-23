@@ -64,7 +64,7 @@ export const getColorThemeJson = (): Promise<ThemeConfiguration> => {
         fs.readFile(themeJsonPath, 'utf8', (err, data) => {
             if (data) {
                 resolve(JSON.parse(data));
-            } else {
+            } else {                
                 reject("no data -> " + err);
             }
         });

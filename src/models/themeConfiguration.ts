@@ -1,11 +1,11 @@
-import { ThemeJsonOptions, FontStyle } from './index';
+import { ThemeJsonOptions, FontStyle, ITokenGroup } from './index';
 
 export class ThemeConfiguration {
 	colors?: { [s: string]: string; };
 	name?: string;
 	scope?: string[];
 	settings?: ITokenColorSettings;
-	tokenColors: ITokenColorDefinition[];
+	tokenColors?: ITokenGroup[];
 	options?: ThemeJsonOptions;
 
 	constructor() {

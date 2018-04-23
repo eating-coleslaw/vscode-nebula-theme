@@ -7,6 +7,9 @@ import * as fs from 'fs';
 import * as painter from '../helpers/painter';
 
 createThemeFile().then((fileName: string) => {
+    
+    console.log('at least we tried :(');
+    
     const filePath = path.resolve('src', fileName);
     const out = path.resolve('out', 'src', fileName);
     fs.rename(filePath, out, (err) => {

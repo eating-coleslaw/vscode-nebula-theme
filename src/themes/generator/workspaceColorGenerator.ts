@@ -1,5 +1,6 @@
 import { IWorkspaceColor, ThemeConfiguration, ThemeJsonOptions } from '../../models/index';
-import * as merge from 'lodash.merge';
+// import * as merge from 'lodash.merge';
+import merge = require('lodash.merge');
 
 /**
  * Get all file icons that can be used in this theme.
@@ -12,7 +13,11 @@ export const getWorkspaceColorDefinitions = (wsColors: IWorkspaceColor[], config
 		if (options.materialize) { setColor = NamedColor.Transparent; }
 		else { setColor = wsColor.color; }
 		config = merge({}, config, setColorDefinition(wsColor.scope, setColor));
+
+		console.log('getWsColors -> ' + wsColor.scope + ' : ' + setColor + '  (materialize? ' + options.materialize + ')');
 	});
+
+	console.log('wsConfig -> ' + config.colors);
 
 	return config;
 };

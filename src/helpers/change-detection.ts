@@ -7,18 +7,23 @@ export const detectConfigChanges = () => {
     const configs = Object.keys(getExtensionConfiguration())
         .map(c => c.split('.').slice(1).join('.'));
 
+    console.log('detected change -> ' + configs);
+
     return compareConfigs(configs).then(updatedOptions => {
         // if there's nothing to update
-        if (!updatedOptions) { return; }
+        if (!updatedOptions) { 
+            
+            console.log('no updated options :/');
+
+            return; }
 
 		/* update icon json file with new options
 		*  TODO: Update for Nebula
 		*/
-        console.log(updatedOptions);
         return createThemeFile(updatedOptions).then(() => {
             promptToReload();
         }).catch(err => {
-            console.error(err);
+            console.error('failed to create -> ' + err);
         });
     });
 };
@@ -32,11 +37,14 @@ export const detectConfigChanges = () => {
 const compareConfigs = (configs: string[]): Promise<{ [name: string]: any }> => {
     let updateRequired = false;
 
+    console.log('we compared? -> ' + configs);
+
 	/* 
 	 * TODO: Update for Nebula
 	*/
     return getColorThemeJson().then(json => {
         configs.forEach(configName => {
+            console.log(configName.toString());
             // no further actions (e.g. reload) required
             if (/show(Welcome|Update|Reload)Message/g.test(configName)) { return; }
 
