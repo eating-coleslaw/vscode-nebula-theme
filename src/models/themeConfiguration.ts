@@ -14,13 +14,6 @@ export class ThemeConfiguration {
 		this.options = {};
 	}
 }
-
-interface ITokenColorDefinition {
-	name: string;
-	scope?: string[];
-	settings?: ITokenColorSettings;
-}
-
 interface ITokenColorSettings {
 	foreground?: string;
 	fontStyle?: FontStyle;

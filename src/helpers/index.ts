@@ -60,9 +60,14 @@ export const getExtensionPath = () => path.join(__dirname, '..', '..', '..');
 export const getColorThemeJson = (): Promise<ThemeConfiguration> => {
     return new Promise((resolve, reject) => {
         const themeJsonPath = path.join(getExtensionPath(), 'out', 'src', themeJsonName);
+        
         console.log('helpers\\index.ts -> ' + themeJsonPath);
+        
         fs.readFile(themeJsonPath, 'utf8', (err, data) => {
             if (data) {
+                
+                console.log('DATA?!?!?!');
+                
                 resolve(JSON.parse(data));
             } else {                
                 reject("no data -> " + err);

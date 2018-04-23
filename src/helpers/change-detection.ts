@@ -10,12 +10,18 @@ export const detectConfigChanges = () => {
     console.log('detected change -> ' + configs);
 
     return compareConfigs(configs).then(updatedOptions => {
+        
+        console.log('what now?');
+        
         // if there's nothing to update
-        if (!updatedOptions) { 
+        if (!updatedOptions) {
             
             console.log('no updated options :/');
 
-            return; }
+            return;
+        }
+
+        console.log('how about here?');
 
 		/* update icon json file with new options
 		*  TODO: Update for Nebula
@@ -44,7 +50,9 @@ const compareConfigs = (configs: string[]): Promise<{ [name: string]: any }> => 
 	*/
     return getColorThemeJson().then(json => {
         configs.forEach(configName => {
-            console.log(configName.toString());
+            
+            console.log('config name -> ' + configName);
+            
             // no further actions (e.g. reload) required
             if (/show(Welcome|Update|Reload)Message/g.test(configName)) { return; }
 
@@ -56,6 +64,8 @@ const compareConfigs = (configs: string[]): Promise<{ [name: string]: any }> => 
                 updateRequired = true;
             }
         });
+
+        console.log('did we get it? -> ' + configs);
 
         return updateRequired ? json.options : undefined;
     });

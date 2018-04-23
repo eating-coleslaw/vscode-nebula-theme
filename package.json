@@ -90,12 +90,10 @@
         "vscode:prepublish": "npm run build",
         "prebuild": "npm run lint && npm run clean",
         "build": "npm run compile && npm run generateJson",
-        "postbuild": "npm run check",
         "clean": "rimraf ./out",
         "compile": "tsc -p ./",
         "compile:watch": "tsc -watch -p ./",
         "generateJson": "ts-node ./scripts/themes/generateJson.ts",
-        "check": "ts-node scripts/themes/checks",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "lint": "tslint -c tslint.json ./src/**/*.ts ./scripts/**/*ts",
         "pretest": "npm run build",
@@ -104,7 +102,7 @@
         "preview": "npm run build && ts-node ./scripts/preview"
     },
     "dependencies": {
-        "@types/lodash.merge": "^4.6.3",
+        "lodash.merge": "^4.6.1",
         "opn": "^5.3.0"
     },
     "devDependencies": {
