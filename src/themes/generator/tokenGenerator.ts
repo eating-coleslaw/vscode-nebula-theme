@@ -10,59 +10,71 @@ export const getTokenStyleDefinitions = (tokenColors: ITokenGroup[], config: The
 	const tokenColorDefinitions = getTokenColorDefinitions(tokenColors, options);
 	const italicCommentsDefinition = setItalicCommentsDefintions(options.commentItalics);
 	
-	config = merge({}, tokenColorDefinitions, italicCommentsDefinition);
+	//config.tokenColors = [...tokenColors];
+	
+	config.tokenColors = [...tokenColorDefinitions];
+	//config = merge({}, config, italicCommentsDefinition);
 
-	/*const getEnabledTokenGroupDefinitions = enableGroupsByThemeConfig(tokenColors, options.themeItalics);
-	const tokenCommentItalicsDefinition = setItalicCommentsDefintions(options.commentItalics);
-	const allTokenDefinitions: ITokenGroup[] = [...getEnabledTokenGroupDefinitions, tokenCommentItalicsDefinition];
-	*/
+	//config = merge({}, tokenColorDefinitions, italicCommentsDefinition);
+	//config = merge({}, italicCommentsDefinition);
+	//config = merge({}, ...tokenColors, italicCommentsDefinition);
 
-	// console.log('enabled groups ->' + getEnabledTokenGroupDefinitions);
-	// console.log('enabled comment italics ->' + tokenCommentItalicsDefinition);
-	// console.log('all token definitions -> ' + allTokenDefinitions);
-
-	//config.tokenColors = [...allTokenDefinitions];
+	//console.log('token color defs ->' + tokenColorDefinitions);
+	console.log('enabled comment italics ->' + italicCommentsDefinition);
+	console.log('token config -> ' + config);
 
 	return config; //merge({}, allTokenDefinitions);
 };
 
-export const getTokenColorDefinitions = (tokenColors: ITokenGroup[], options: ThemeJsonOptions) => {
-	let config = { tokenColors: [] };
+export const getTokenColorDefinitions = (tokenColors: ITokenGroup[], options: ThemeJsonOptions): ITokenGroup[] => {
 	let themeItalics = options.themeItalics;
+	let obj = [];
+	console.log('theme italics -> ' + themeItalics);
+	return tokenColors;
 
+	for (let group of tokenColors) {
+		console.log('group -> ' + group);
+
+		let exclusions = group.settings.excludeIn;
+		//if (exclusions.some(p => p === themeItalics)) { continue; }
+		obj.concat(group);
+	}
+
+	/*
 	tokenColors.forEach(group => {
 		let exclusions = group.settings.excludeIn;
 		if (!exclusions.some(p => p === themeItalics)) {
 			config = merge({}, config, setTokenColorDefinition(group));
 		}
 	});
+	*/
 
-	console.log('token config -> ' + config);
+	console.log('token config -> ' + obj);
 
-	return config;
+	return obj;
 };
 
 const setTokenColorDefinition = (tokenGroup: ITokenGroup ) => {
-	const array = { tokenColors: [] };
+	let obj = {
+		name: `${tokenGroup.name}`,
+		scope: [...tokenGroup.scope],
+		settings: {
+			fontStyle: `${tokenGroup.settings.foreground}`
+		}
+	};
+	console.log('token def -> ' + obj);
+	return obj;
+	/*
 	let obj: ITokenGroup = {
 		name: tokenGroup.name,
 		scope: [...tokenGroup.scope],
 		settings: tokenGroup.settings	
 	};
+
 	array.tokenColors = [obj];
 	console.log('token def -> ' + obj);
 	return array;
-};
-
-
-const enableGroupsByThemeConfig = (tokenColors: ITokenGroup[], themeItalics: string): ITokenGroup[] => {
-	return tokenColors.filter(group => {
-		let exclusions = group.settings.excludeIn;
-		
-		console.log('token exclusions -> ' + exclusions.toString());
-		
-		return !exclusions ? true : exclusions.some(p => p === themeItalics);
-	});
+	*/
 };
 
 const setItalicCommentsDefintions = (enabled: boolean = true) => {
@@ -77,13 +89,6 @@ const setItalicCommentsDefintions = (enabled: boolean = true) => {
 			}
 		];
 	}
-	/*
-	const obj: ITokenGroup = {
-		name: TokenScopes.Comments,
-		scope: [TokenScopes.Comments],
-		settings: { fontStyle: FontStyle.Italics }
-	};
-	*/
 
 	console.log('italics object -> ' + obj.toString());
 
@@ -91,5 +96,10 @@ const setItalicCommentsDefintions = (enabled: boolean = true) => {
 };
 
 const enum TokenScopes {
-	Comments = 'comments'
+	Comments = 'comment'
+}
+
+const enum TokenSettings {
+	FontStyle = 'fontStyle',
+	Foreground = 'foreground'
 }

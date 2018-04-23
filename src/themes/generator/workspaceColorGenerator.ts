@@ -14,7 +14,7 @@ export const getWorkspaceColorDefinitions = (wsColors: IWorkspaceColor[], config
 		else { setColor = wsColor.color; }
 		config = merge({}, config, setColorDefinition(wsColor.scope, setColor));
 
-		console.log('getWsColors -> ' + wsColor.scope + ' : ' + setColor + '  (materialize? ' + options.materialize + ')');
+		//console.log('getWsColors -> ' + wsColor.scope + ' : ' + setColor + '  (materialize? ' + options.materialize + ')');
 	});
 
 	console.log('wsConfig -> ' + config.colors);

@@ -1,4 +1,3 @@
-
 import { showUpdateMessage } from './update';
 import { showWelcomeMessage } from './welcome';
 import { ThemeStatus } from '../helpers/versioning';

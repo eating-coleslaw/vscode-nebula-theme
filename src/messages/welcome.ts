@@ -1,7 +1,7 @@
 import * as helpers from './../helpers';
 import * as versioning from './../helpers/versioning';
 import * as vscode from 'vscode';
-import * as opn from 'opn';
+import opn = require('opn');
 import * as i18n from './../i18N';
 import { activateColorTheme } from '../commands/activate';
 

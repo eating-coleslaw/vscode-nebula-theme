@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import * as i18n from './../i18N';
-import * as opn from 'opn';
+import opn = require('opn');
 
 /** Show message that the editor version is outdated. */
 export const showOutdatedMessage = () => {
