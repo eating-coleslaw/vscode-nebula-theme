@@ -1,9 +1,6 @@
 import { IWorkspaceColor, ThemeConfiguration, ThemeJsonOptions } from '../../models/index';
 import merge = require('lodash.merge');
 
-/**
- * Get all file icons that can be used in this theme.
- */
 export const getWorkspaceColorDefinitions = (wsColors: IWorkspaceColor[], config: ThemeConfiguration, options: ThemeJsonOptions): ThemeConfiguration => {
 	config = merge({}, config);
 
