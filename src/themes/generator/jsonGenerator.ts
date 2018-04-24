@@ -31,8 +31,6 @@ export const createThemeFile = (jsonOptions?: ThemeJsonOptions): Promise<string>
  */
 export const generateThemeConfigurationObject = (options: ThemeJsonOptions): ThemeConfiguration => {
     
-    console.log('tried generating config object :(');
-    
     const themeConfig = merge({}, new ThemeConfiguration(), { options });
     const workspaceColorDefinitions = getWorkspaceColorDefinitions(workspaceColors, themeConfig, options);
     const tokenColorDefinitions = getTokenStyleDefinitions(tokenGroups, themeConfig, options);

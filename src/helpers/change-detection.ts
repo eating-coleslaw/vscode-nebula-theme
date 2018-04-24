@@ -7,11 +7,7 @@ export const detectConfigChanges = () => {
     const configs = Object.keys(getExtensionConfiguration())
         .map(c => c.split('.').slice(1).join('.'));
 
-    console.log('detected change -> ' + configs);
-
     return compareConfigs(configs).then(updatedOptions => {
-        
-        console.log('what now?');
         
         // if there's nothing to update
         if (!updatedOptions) { return; }
@@ -43,7 +39,7 @@ const compareConfigs = (configs: string[]): Promise<{ [name: string]: any }> => 
         configs.forEach(configName => {
             
             // no further actions (e.g. reload) required
-            if (/show(Welcome|Update|Reload)Message/g.test(configName)) { return; }
+            //if (/show(Welcome|Update|Reload)Message/g.test(configName)) { return; }
 
             const configValue = getThemeConfig(configName).globalValue;
             const currentState = getObjectPropertyValue(json.options, configName);
