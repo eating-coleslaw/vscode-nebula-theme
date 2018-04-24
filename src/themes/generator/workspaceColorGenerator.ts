@@ -6,7 +6,7 @@ export const getWorkspaceColorDefinitions = (wsColors: IWorkspaceColor[], config
 
 	wsColors.forEach(wsColor => {
 		let setColor: string;
-		if (options.materialize) { setColor = NamedColor.Transparent; }
+		if (options.materialize) { setColor = wsColor.materialize ? NamedColor.Transparent : wsColor.color; }
 		else { setColor = wsColor.color; }
 		config = merge({}, config, setColorDefinition(wsColor.scope, setColor));
 	});
