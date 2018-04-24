@@ -1,29 +1,37 @@
-import { ThemeConfiguration, ThemeJsonOptions, ITokenGroup, FontStyle } from '../../models/index';
+import { ThemeConfiguration, ThemeJsonOptions, ITokenGroup, FontStyle, ItalicsTheme } from '../../models/index';
 import merge = require('lodash.merge');
+import { commentScope, basicScopes, moreScopes, operatorScopes } from '../TokenGroups/index';
 
 /**
  * Get all file icons that can be used in this theme.
  */
 export const getTokenStyleDefinitions = (tokenColors: ITokenGroup[], config: ThemeConfiguration, options: ThemeJsonOptions): ThemeConfiguration => {
 	config = merge({}, config);
-	
-	const tokenColorDefinitions = getTokenColorDefinitions(tokenColors, options);
-	const italicCommentsDefinition = setItalicCommentsDefintions(options.commentItalics);
-	
+
 	//config.tokenColors = [...tokenColors];
-	
-	config.tokenColors = [...tokenColorDefinitions];
-	//config = merge({}, config, italicCommentsDefinition);
 
-	//config = merge({}, tokenColorDefinitions, italicCommentsDefinition);
-	//config = merge({}, italicCommentsDefinition);
-	//config = merge({}, ...tokenColors, italicCommentsDefinition);
+	const tokenDefinitions = setItalicTokenDefinitions(options.commentItalics, options.themeItalics);
 
-	//console.log('token color defs ->' + tokenColorDefinitions);
-	console.log('enabled comment italics ->' + italicCommentsDefinition);
+	config = merge({}, config, tokenDefinitions);
+
+	config.tokenColors = [...config.tokenColors, ...tokenColors];
+
 	console.log('token config -> ' + config);
 
-	return config; //merge({}, allTokenDefinitions);
+	return config;
+};
+
+const setItalicTokenDefinitions = (italicComments: boolean, italicsTheme: string) => {
+	let obj = { tokenColors: [] };
+	obj.tokenColors = [
+		{
+			name: 'Compiled Italics',
+			scope: [...getItalicScopeArray(italicComments, italicsTheme)],
+			settings: { fontStyle: `${FontStyle.Italics}`}
+		}
+	];
+
+	return merge({}, obj);
 };
 
 export const getTokenColorDefinitions = (tokenColors: ITokenGroup[], options: ThemeJsonOptions): ITokenGroup[] => {
@@ -32,13 +40,12 @@ export const getTokenColorDefinitions = (tokenColors: ITokenGroup[], options: Th
 	console.log('theme italics -> ' + themeItalics);
 	return tokenColors;
 
-	for (let group of tokenColors) {
+	tokenColors.forEach(group => {
 		console.log('group -> ' + group);
 
 		let exclusions = group.settings.excludeIn;
-		//if (exclusions.some(p => p === themeItalics)) { continue; }
-		obj.concat(group);
-	}
+		if (exclusions.some(p => p === themeItalics)) { tokenColors.splice(tokenColors.indexOf(group), 1); }
+	});
 
 	/*
 	tokenColors.forEach(group => {
@@ -52,6 +59,35 @@ export const getTokenColorDefinitions = (tokenColors: ITokenGroup[], options: Th
 	console.log('token config -> ' + obj);
 
 	return obj;
+};
+
+const getItalicScopeArray = (italicComments: boolean, italicsTheme: string): string[] => {
+	let array: string[] = [];
+	if (italicComments) {
+		array = [...array, ...commentScope];
+	}
+
+	if (italicsTheme === ItalicsTheme.None) { return array; }
+
+	if (italicsTheme === ItalicsTheme.Basic) {
+		array = [...array, ...basicScopes];
+		return array;
+	}
+
+	else if (italicsTheme === ItalicsTheme.More) {
+		array = [...array, ...basicScopes, ...moreScopes];
+		return array;
+	}
+
+	else if (italicsTheme === ItalicsTheme.Operator) {
+		array = [...array, ...basicScopes, ...moreScopes, ...operatorScopes];
+		return array;
+	}
+
+	else {
+		array = [...array, ...basicScopes];
+		return array;
+	}
 };
 
 const setTokenColorDefinition = (tokenGroup: ITokenGroup ) => {

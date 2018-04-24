@@ -1,0 +1,11 @@
+{
+	name: 'More Italics',
+	scope: [],
+	settings: {
+		fontStyle: FontStyle.Italics,
+		excludeIn: [ 
+			ItalicsTheme.None,
+			ItalicsTheme.Basic
+		]
+	}
+}

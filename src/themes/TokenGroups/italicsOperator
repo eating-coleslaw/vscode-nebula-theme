@@ -1,0 +1,12 @@
+{
+	name: 'Operator Italics',
+	scope: [],
+	settings: {
+		fontStyle: FontStyle.Italics,
+		excludeIn: [
+			ItalicsTheme.None,
+			ItalicsTheme.Basic,
+			ItalicsTheme.More
+		]
+	}
+}

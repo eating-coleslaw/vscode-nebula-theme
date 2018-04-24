@@ -197,7 +197,7 @@ export const tokenGroups: ITokenGroup[] = [
 			"constant.other.database-name.sql"
 		],
 		settings: {
-			foreground: '#FBD3E1'
+			foreground: 'FBD3E1#'
 		},
 	},
 	{ 
@@ -296,55 +296,6 @@ export const tokenGroups: ITokenGroup[] = [
 			"entity.name.type",
 			"entity.name.class",
 			"entity.other.inherited-class"
-		],
-		settings: {
-			fontStyle: FontStyle.Underline
-		}
+		]
 	}
-	/*
-	{
-		name: 'Basic Italics',
-		scope: [
-			"markup.italic.markdown",
-			"punctuation.definition.italic.markdown",
-			"storage.type.function",
-			"meta.functiona.variable.css",
-			"variable.argument.css",
-			"markup.quote",
-			"entity.other.inherited-class",
-			"entity.other.attribute-name.pseudo-element.css",
-			"string.quoted.double.css",
-			"punctuation.definition.string.css"
-		],
-		settings: {
-			fontStyle: FontStyle.Italics,
-			excludeIn: [
-				ItalicsTheme.None
-			]
-		}
-	},
-	{
-		name: 'More Italics',
-		scope: [],
-		settings: {
-			fontStyle: FontStyle.Italics,
-			excludeIn: [ 
-				ItalicsTheme.None,
-				ItalicsTheme.Basic
-			]
-		}
-	},
-	{
-		name: 'Operator Italics',
-		scope: [],
-		settings: {
-			fontStyle: FontStyle.Italics,
-			excludeIn: [
-				ItalicsTheme.None,
-				ItalicsTheme.Basic,
-				ItalicsTheme.More
-			]
-		}
-	}
-	*/
 ];
