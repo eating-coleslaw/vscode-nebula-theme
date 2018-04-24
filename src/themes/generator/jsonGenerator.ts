@@ -15,26 +15,14 @@ export const createThemeFile = (jsonOptions?: ThemeJsonOptions): Promise<string>
     // override the default options with the new options
     const options = merge({}, getDefaultThemeOptions(), jsonOptions);
 
-    console.log('options -> ' + options);
-
     const themeJsonPath = path.join(__dirname, '../../../', 'src', themeJsonName);
-
-    console.log('createThemeFile -> ' + themeJsonPath);
 
     const json = generateThemeConfigurationObject(options);
 
-    //console.log('json theme config object ->' + JSON.stringify(json));
-
     return new Promise((resolve, reject) => {
         fs.writeFile(themeJsonPath, JSON.stringify(json, undefined, 2), (err) => {
-            if (err) {
-                resolve(themeJsonName);
-                console.log('fake resolve :(');
-                //reject('failed writeFile in jsonGenerator -> ' + err);
-            }
+            if (err) { reject(err); }
         });
-
-
     });
 };
 
@@ -48,9 +36,6 @@ export const generateThemeConfigurationObject = (options: ThemeJsonOptions): The
     const themeConfig = merge({}, new ThemeConfiguration(), { options });
     const workspaceColorDefinitions = getWorkspaceColorDefinitions(workspaceColors, themeConfig, options);
     const tokenColorDefinitions = getTokenStyleDefinitions(tokenGroups, themeConfig, options);
-
-    console.log('config workspace colors -> ' + workspaceColorDefinitions);
-    console.log('config token colors -> ' + tokenColorDefinitions);
 
     return merge({}, workspaceColorDefinitions, tokenColorDefinitions);
 };
