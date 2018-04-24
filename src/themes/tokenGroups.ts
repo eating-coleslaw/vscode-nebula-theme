@@ -1,4 +1,4 @@
-import { ITokenGroup, ItalicsTheme, FontStyle } from '../models/index';
+import { ITokenGroup, FontStyle } from '../models/index';
 
 export const tokenGroups: ITokenGroup[] = [
 	{ 
@@ -301,50 +301,4 @@ export const tokenGroups: ITokenGroup[] = [
 			fontStyle: FontStyle.Underline
 		}
 	}
-	/*
-	{
-		name: 'Basic Italics',
-		scope: [
-			"markup.italic.markdown",
-			"punctuation.definition.italic.markdown",
-			"storage.type.function",
-			"meta.functiona.variable.css",
-			"variable.argument.css",
-			"markup.quote",
-			"entity.other.inherited-class",
-			"entity.other.attribute-name.pseudo-element.css",
-			"string.quoted.double.css",
-			"punctuation.definition.string.css"
-		],
-		settings: {
-			fontStyle: FontStyle.Italics,
-			excludeIn: [
-				ItalicsTheme.None
-			]
-		}
-	},
-	{
-		name: 'More Italics',
-		scope: [],
-		settings: {
-			fontStyle: FontStyle.Italics,
-			excludeIn: [ 
-				ItalicsTheme.None,
-				ItalicsTheme.Basic
-			]
-		}
-	},
-	{
-		name: 'Operator Italics',
-		scope: [],
-		settings: {
-			fontStyle: FontStyle.Italics,
-			excludeIn: [
-				ItalicsTheme.None,
-				ItalicsTheme.Basic,
-				ItalicsTheme.More
-			]
-		}
-	}
-	*/
 ];

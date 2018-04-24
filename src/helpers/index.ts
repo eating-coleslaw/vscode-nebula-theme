@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import * as reloadMessages from './../messages/reload';
 import { AdvancedWorkspaceConfiguration } from '../models';
-import { themeJsonName, createThemeFile } from '../themes';
+import { themeJsonName } from '../themes';
 import { ThemeConfiguration } from '../models/index';
 
 /** Get configuration of vs code. */
@@ -61,21 +61,11 @@ export const getColorThemeJson = (): Promise<ThemeConfiguration> => {
     return new Promise((resolve, reject) => {
         const themeJsonPath = path.join(getExtensionPath(), 'out', 'src', themeJsonName);
         
-        console.log('helpers\\index.ts -> ' + themeJsonPath);
-        
         fs.readFile(themeJsonPath, 'utf8', (err, data) => {
             if (data) {
-                
-                console.log('DATA?!?!?!');
-                
                 resolve(JSON.parse(data));
-            } else {                
-                
-                createThemeFile();
-
-                console.log('no data -> hopefully didn\'t break...');
-
-                //reject("no data -> " + err);
+            } else {
+               reject(err);
             }
         });
     });

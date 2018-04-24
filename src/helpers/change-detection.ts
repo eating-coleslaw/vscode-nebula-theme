@@ -14,22 +14,15 @@ export const detectConfigChanges = () => {
         console.log('what now?');
         
         // if there's nothing to update
-        if (!updatedOptions) {
-            
-            console.log('no updated options :/');
+        if (!updatedOptions) { return; }
 
-            return;
-        }
-
-        console.log('how about here?');
-
-		/* update icon json file with new options
+		/* update theme json file with new options
 		*  TODO: Update for Nebula
 		*/
         return createThemeFile(updatedOptions).then(() => {
             promptToReload();
         }).catch(err => {
-            console.error('failed to create -> ' + err);
+            console.error(err);
         });
     });
 };
@@ -43,21 +36,14 @@ export const detectConfigChanges = () => {
 const compareConfigs = (configs: string[]): Promise<{ [name: string]: any }> => {
     let updateRequired = false;
 
-    console.log('we compared? -> ' + configs);
-
 	/* 
 	 * TODO: Update for Nebula
 	*/
     return getColorThemeJson().then(json => {
         configs.forEach(configName => {
             
-            console.log('config name -> ' + configName);
-            
             // no further actions (e.g. reload) required
-            if (/show(Welcome|Update|Reload)Message/g.test(configName)) {
-                console.log('no further action required');
-                return; 
-            }
+            if (/show(Welcome|Update|Reload)Message/g.test(configName)) { return; }
 
             const configValue = getThemeConfig(configName).globalValue;
             const currentState = getObjectPropertyValue(json.options, configName);
@@ -67,8 +53,6 @@ const compareConfigs = (configs: string[]): Promise<{ [name: string]: any }> => 
                 updateRequired = true;
             }
         });
-
-        console.log('did we get it? -> ' + configs);
 
         return updateRequired ? json.options : undefined;
     });

@@ -1,5 +1,4 @@
-import merge = require('lodash.merge');
-import { ITokenGroup, FontStyle } from '../../models';
+import { FontStyle } from '../../models';
 
 export const commentScope: string[] = [
 	"comment"
