@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import * as reloadMessages from './../messages/reload';
 import { AdvancedWorkspaceConfiguration } from '../models';
-import { themeJsonName } from '../themes';
+import { themeJsonName, createThemeFile } from '../themes';
 import { ThemeConfiguration } from '../models/index';
 
 /** Get configuration of vs code. */
@@ -65,7 +65,9 @@ export const getColorThemeJson = (): Promise<ThemeConfiguration> => {
             if (data) {
                 resolve(JSON.parse(data));
             } else {
-               reject(err);
+                createThemeFile();
+                promptToReload();
+                //reject(err);
             }
         });
     });
