@@ -6,17 +6,23 @@ import { AdvancedWorkspaceConfiguration } from '../models';
 import { themeJsonName } from '../themes';
 import { ThemeConfiguration } from '../models/index';
 
-/** Get configuration of vs code. */
+/**
+ * Get configuration of vs code.
+ */
 export const getConfig = (section?: string) => {
     return vscode.workspace.getConfiguration(section) as AdvancedWorkspaceConfiguration;
 };
 
-/** Get list of configuration entries of package.json */
+/**
+ * Get list of configuration entries of package.json
+ */
 export const getExtensionConfiguration = (): { [config: string]: any } => {
     return vscode.extensions.getExtension('ChirtleLovesDolls.nebula-theme').packageJSON.contributes.configuration.properties;
 };
 
-/** Update configuration of vs code. */
+/**
+ * Update configuration of vs code.
+ */
 export const setConfig = (section: string, value: any, global: boolean = false) => {
     return getConfig().update(section, value, global);
 };
@@ -25,12 +31,16 @@ export const getThemeConfig = (section: string) => {
     return getConfig('nebula-theme').inspect(section);
 };
 
-/** Is a folder opened? */
+/**
+ * Is a folder opened?
+ */
 export const hasWorkspace = (): boolean => {
     return vscode.workspace.rootPath !== undefined;
 };
 
-/** Set the config of the theme. */
+/**
+ * Set the config of the theme.
+ */
 export const setThemeConfig = (section: string, value: any, global: boolean = false) => {
     return getConfig('nebula-theme').update(section, value, global);
 };

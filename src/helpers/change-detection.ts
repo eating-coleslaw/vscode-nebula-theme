@@ -3,7 +3,7 @@ import { getObjectPropertyValue, setObjectPropertyValue } from './objects';
 import { getExtensionConfiguration, promptToReload, getColorThemeJson, getThemeConfig } from '.';
 import { green } from '../../scripts/helpers/painter';
 
-/** Compare the workspace and the user configurations with the current setup of the icons. */
+/** Compare the workspace and the user configurations with the current setup of the theme. */
 export const detectConfigChanges = () => {
     const configs = Object.keys(getExtensionConfiguration())
         .map(c => c.split('.').slice(1).join('.'));
@@ -25,7 +25,7 @@ export const detectConfigChanges = () => {
 
 /**
  * Compares a specific configuration in the settings with a current configuration state.
- * The current configuration state is read from the icons json file.
+ * The current configuration state is read from the theme json file.
  * @param configs List of configuration names
  * @returns List of configurations that needs to be updated.
  */
