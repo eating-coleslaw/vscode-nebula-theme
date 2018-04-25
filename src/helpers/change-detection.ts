@@ -1,4 +1,4 @@
-import { createThemeFile } from '../themes/index';
+import { createThemeFile, getDefaultThemeOptions } from '../themes/index';
 import { getObjectPropertyValue, setObjectPropertyValue } from './objects';
 import { getExtensionConfiguration, promptToReload, getColorThemeJson, getThemeConfig } from '.';
 
@@ -36,15 +36,29 @@ const compareConfigs = (configs: string[]): Promise<{ [name: string]: any }> => 
 	 * TODO: Update for Nebula
 	*/
     return getColorThemeJson().then(json => {
+        const defaults = getDefaultThemeOptions();
+        
         configs.forEach(configName => {
             
-            // no further actions (e.g. reload) required
-            //if (/show(Welcome|Update|Reload)Message/g.test(configName)) { return; }
+            console.log('name' + configName);
 
             const configValue = getThemeConfig(configName).globalValue;
             const currentState = getObjectPropertyValue(json.options, configName);
 
-            if (configValue !== undefined && JSON.stringify(configValue) !== JSON.stringify(currentState)) {
+            if (configValue === undefined && currentState !== undefined) {
+                setObjectPropertyValue(json.options, configName, getObjectPropertyValue(defaults, configName));
+                updateRequired = true;
+            }
+
+
+            // no further actions (e.g. reload) required
+            //if (/show(Welcome|Update|Reload)Message/g.test(configName)) { return; }
+
+            //const configValue = getThemeConfig(configName).globalValue;
+            //const currentState = getObjectPropertyValue(json.options, configName);
+
+            else if (configValue !== undefined && JSON.stringify(configValue) !== JSON.stringify(currentState)) {
+            //if (JSON.stringify(configValue) !== JSON.stringify(currentState)) {
                 setObjectPropertyValue(json.options, configName, configValue);
                 updateRequired = true;
             }
