@@ -4,17 +4,16 @@ import * as versioning from './../helpers/versioning';
 import * as i18n from './../i18N';
 import * as outdatedMessage from './../messages/outdated';
 
-/** Activate the icon theme by changing the settings for the colorTheme. */
+/** Activate the color theme by changing the settings for the colorTheme. */
 export const activateColorTheme = () => {
-	//TODO: update to correct version support
-    if (!versioning.checkVersionSupport('1.10.0')) {
+    if (!versioning.checkVersionSupport('1.21.0')) {
         outdatedMessage.showOutdatedMessage();
         return Promise.reject('Outdated version of vscode!');
     }
     return setColorTheme();
 };
 
-/** Set the icon theme in the config. */
+/** Set the color theme in the config. */
 const setColorTheme = () => {
     // global user config
     return helpers.getConfig().update('workbench.colorTheme', 'nebula-theme', true)
