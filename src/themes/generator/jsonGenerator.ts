@@ -22,10 +22,8 @@ export const createThemeFile = (jsonOptions?: ThemeJsonOptions): Promise<string>
     return new Promise((resolve, reject) => {
         fs.writeFile(themeJsonPath, JSON.stringify(json, undefined, 2), (err) => {
             if (err) { 
-                console.log('-> error rite here <--');
                 reject(err); }
             else {
-                console.log('<- no error over there -->');
                 resolve(themeJsonName);
             }
         });

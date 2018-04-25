@@ -16,7 +16,7 @@ export const initTranslations = async () => {
         fallbackTranslation = await loadTranslation('en');
     }
     catch (error) {
-        console.log(error);
+        console.error(error);
     }
 };
 

@@ -44,18 +44,22 @@ export const isThemeActivated = (global: boolean = false): boolean => {
         : getConfig().inspect('workbench.colorTheme').workspaceValue === 'nebula-theme';
 };
 
-/** Is the theme not visible for the user? */
+/**
+ * Is the theme not visible for the user?
+ */
 export const isThemeNotVisible = (): boolean => {
     const config = getConfig().inspect('workbench.colorTheme');
     return (!isThemeActivated(true) && config.workspaceValue === undefined) || // no workspace and not global
         (!isThemeActivated() && config.workspaceValue !== undefined);
 };
 
-/** Return the path of the extension in the file system. */
+/**
+ * Return the path of the extension in the file system.
+ */
 export const getExtensionPath = () => path.join(__dirname, '..', '..', '..');
 
-/** Get the configuration of the icons as JSON Object
- * TODO: Finish updating for Nebula
+/**
+ * Get the configuration of the icons as JSON Object
  */
 export const getColorThemeJson = (): Promise<ThemeConfiguration> => {
     return new Promise((resolve, reject) => {
@@ -65,18 +69,14 @@ export const getColorThemeJson = (): Promise<ThemeConfiguration> => {
             if (data) {
                 resolve(JSON.parse(data));
             } else {
-                //console.log('created new file due to failed read');
-                //createThemeFile();
-                //console.log('hi hello?!');
-                //promptToReload();
-                reject('no longer hacking 4 uu :0 --> ' + err);
+                reject(err);
             }
         });
     });
 };
 
-/** Reload vs code window
- * TODO: Finish updating for Nebula
+/**
+ * Reload vs code window
  */
 export const promptToReload = () => {
     return reloadMessages.showConfirmToReloadMessage().then(result => {
@@ -88,10 +88,14 @@ const reloadWindow = () => {
     return vscode.commands.executeCommand('workbench.action.reloadWindow');
 };
 
-/** Capitalize the first letter of a string */
+/**
+ * Capitalize the first letter of a string
+ */
 export const capitalizeFirstLetter = (name: string): string => name.charAt(0).toUpperCase() + name.slice(1);
 
-/** TitleCase all words in a string */
+/**
+ * TitleCase all words in a string
+ */
 export const toTitleCase = (str) => {
     return str.replace(/\w\S*/g, (txt) => { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
 };

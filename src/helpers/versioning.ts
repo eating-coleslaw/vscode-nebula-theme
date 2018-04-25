@@ -30,7 +30,7 @@ export const checkThemeStatus = async (state: vscode.Memento) => {
         }
     }
     catch (err) {
-        console.log(err);
+        console.error(err);
     }
 };
 
@@ -50,8 +50,7 @@ const getCurrentExtensionVersion = (): string => {
 };
 
 /**
- * Check if the current version of VS Code
- * supports new features.
+ * Check if the current version of VS Code supports new features.
 */
 export const checkVersionSupport = (supportedVersion: string): boolean => {
     return !semver.lt(vscode.version, supportedVersion);
