@@ -9,15 +9,21 @@ export const detectConfigChanges = () => {
 
     return compareConfigs(configs).then(updatedOptions => {
         
+        console.log('did we even make it here?' + updatedOptions);
+
         // if there's nothing to update
-        if (!updatedOptions) { return; }
+        if (!updatedOptions) { 
+            console.log('is this broken? :/');
+            return; }
 
 		/* update theme json file with new options
 		*  TODO: Update for Nebula
 		*/
         return createThemeFile(updatedOptions).then(() => {
+            console.log('should be prompted to update here :/');
             promptToReload();
         }).catch(err => {
+            console.log('hi goodbye?!');
             console.error(err);
         });
     });
@@ -37,31 +43,31 @@ const compareConfigs = (configs: string[]): Promise<{ [name: string]: any }> => 
 	*/
     return getColorThemeJson().then(json => {
         const defaults = getDefaultThemeOptions();
-        
+
         configs.forEach(configName => {
-            
-            console.log('name' + configName);
+
 
             const configValue = getThemeConfig(configName).globalValue;
             const currentState = getObjectPropertyValue(json.options, configName);
+            const configDefault = getObjectPropertyValue(defaults, configName);
 
-            if (configValue === undefined && currentState !== undefined) {
-                setObjectPropertyValue(json.options, configName, getObjectPropertyValue(defaults, configName));
+            console.log('name' + configName + '  configValue: ' + configValue + '  currentState: ' + currentState + '  default: ' + configDefault);
+
+            // If property is deleted, and it wasn't the default value, set it to the default value
+            if (configValue === undefined && currentState !== configDefault) {
+                setObjectPropertyValue(json.options, configName, configDefault);
+                console.log('condition 1');
                 updateRequired = true;
             }
 
+            else if (configValue !== undefined && currentState !== configValue) {
+                setObjectPropertyValue(json.options, configName, configValue);
+                console.log('condition 2');
+                updateRequired = true;
+            }
 
             // no further actions (e.g. reload) required
             //if (/show(Welcome|Update|Reload)Message/g.test(configName)) { return; }
-
-            //const configValue = getThemeConfig(configName).globalValue;
-            //const currentState = getObjectPropertyValue(json.options, configName);
-
-            else if (configValue !== undefined && JSON.stringify(configValue) !== JSON.stringify(currentState)) {
-            //if (JSON.stringify(configValue) !== JSON.stringify(currentState)) {
-                setObjectPropertyValue(json.options, configName, configValue);
-                updateRequired = true;
-            }
         });
 
         return updateRequired ? json.options : undefined;
