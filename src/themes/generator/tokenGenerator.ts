@@ -1,6 +1,6 @@
 import { ThemeConfiguration, ThemeJsonOptions, ITokenGroup, FontStyle, ItalicsTheme } from '../../models/index';
 import merge = require('lodash.merge');
-import { commentScope, basicScopes, moreScopes, operatorScopes } from '../TokenGroups/index';
+import { commentScope, basicScopes, moreScopes, operatorScopes, noRestraintScopes } from '../TokenGroups/index';
 
 
 export const getTokenStyleDefinitions = (tokenColors: ITokenGroup[], config: ThemeConfiguration, options: ThemeJsonOptions): ThemeConfiguration => {
@@ -48,6 +48,11 @@ const getItalicScopeArray = (italicComments: boolean, italicsTheme: string): str
 
 	else if (italicsTheme === ItalicsTheme.Operator) {
 		array = [...array, ...basicScopes, ...moreScopes, ...operatorScopes];
+		return array;
+	}
+
+	else if (italicsTheme === ItalicsTheme.NoRestraint) {
+		array = [...array, ...basicScopes, ...moreScopes, ...operatorScopes, ...noRestraintScopes];
 		return array;
 	}
 

@@ -2,5 +2,6 @@ export enum ItalicsTheme {
 	None = 'none',
 	Basic = 'basic',
 	More = 'more',
-	Operator = 'operator'
+	Operator = 'operator',
+	NoRestraint = 'no restraint'
 }

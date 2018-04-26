@@ -75,7 +75,8 @@
                         "none",
                         "basic",
                         "more",
-                        "operator"
+                        "operator",
+                        "no restraint"
                     ]
                 },
                 "nebula-theme.materialize": {
