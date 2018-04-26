@@ -1,9 +1,18 @@
-import { FontStyle } from '../../models';
+/**
+ * Each scope should only be referenced a SINGLE time across all of the
+ * arrays in this file. This is to make maintaining the italic variants
+ * easier. 
+ * 
+ * Also, please keep everything in alphabetical order :D
+ */
 
 export const commentScope: string[] = [
 	"comment"
 ];
 
+/** 
+ * 1 - Basic
+ */
 export const basicScopes: string[] = [
 	"entity.other.attribute-name.pseudo-element.css",
 	"entity.other.inherited-class",
@@ -18,33 +27,31 @@ export const basicScopes: string[] = [
 ];
 
 /**
- * Copied from Material Palenight - Italics
+ * 2 - Wavy
  */
 export const moreScopes: string[] = [
-	"assignment.coffee",
-	"entity.name.function.ts",
-	"entity.name.function.tsx",
 	"entity.name.tag.custom",
 	"entity.name.type.ts",
-	"entity.other.attribute-name",
 	"italic",
-	"keyword.control",
 	"keyword.operator.type.annotation",
+	"keyword.control.import",
 	"modifier",
 	"punctuation.section.embedded",
 	"quote",
-	"source.js.jsx keyword.control.flow.js",
+	"storage.type",
 	"storage.type.class",
+	"support.class",
+	"support.class.builtin",
 	"support.function.basic_functions",
+	"support.function.builtin",
 	"support.type.primitive",
 	"support.type.property.css",
 	"this",
 	"type.function",
-	"variable.assignment.coffee"
 ];
 
 /**
- * Copied from Material Palenight - Operator
+ * 3 - Curly
  */
 export const operatorScopes: string[] = [
 	"constant.language",
@@ -52,7 +59,7 @@ export const operatorScopes: string[] = [
 	"constant.other.rgb-value.css",
 	"entity.name.tag.doctype",
 	"entity.name.tag.yaml",
-	"keyword",
+	"keyword.control",
 	"keyword.operator.expression.typeof",
 	"language",
 	"meta.export.js variable.other",
@@ -68,12 +75,9 @@ export const operatorScopes: string[] = [
 	"meta.tag.sgml.doctype.html",
 	"meta.var.expr storage.type",
 	"parameter",
-	"source.json meta.structure.dictionary support.type.property-name.json",
+	"source.js.jsx keyword.control.flow.js",
 	"storage",
-	"string",
 	"support.constant.math",
-	"support.constant.vendored.property-value.css",
-	"support.type.property-name.css",
 	"support.type.vendored.property-name.css",
 	"type.var",
 	"variable.language",
@@ -90,36 +94,43 @@ export const operatorScopes: string[] = [
 ];
 
 /**
- * Basically everything
+ * 4 - No Restraint
  */
 export const noRestraintScopes: string[] = [
 	".type",
 	"constant.character",
 	"constant.other",
 	"emphasis",
+	"entity.name.function.ts",
+	"entity.name.function.tsx",
 	"entity.name.tag.script.html",
+	"entity.other.attribute-name",
 	"entity.other.attribute-name.pseudo-class.css",
 	"entity.other.attribute-name.pseudo-selector.css",
 	"entity.other.inherited-class entity.name.type.module",
 	"entity.other.less.mixin",
+	"keyword",
 	"markup.italic",
 	"meta.diff",
 	"meta.diff.header",
 	"meta.selector.css entity.other.attribute-name.class",
 	"punctuation.definition.blockquote.markdown",
 	"punctuation.definition.comment",
+	"source.json meta.structure.dictionary support.type.property-name.json",
 	"source.java storage.type.annotation",
 	"storage.modifier",
 	"storage.type",
 	"storage.type.annotation",
 	"storage.type.class.js",
+	"string",
 	"string.quoted.docstring",
 	"string.regexp",
-	"support.class",
 	"support.constant",
+	"support.constant.vendored.property-value.css",
 	"support.module",
 	"support.node",
 	"support.type",
+	"support.type.property-name.css",
 	"text.html.markdown",
 	"variable.language.this",
 	"variable.language.this.js"

@@ -1,7 +1,7 @@
-import { createThemeFile, getDefaultThemeOptions } from '../themes/index';
-import { getObjectPropertyValue, setObjectPropertyValue } from './objects';
-import { getExtensionConfiguration, promptToReload, getColorThemeJson, getThemeConfig } from '.';
-import { green } from '../../scripts/helpers/painter';
+import { createThemeFile, getDefaultThemeOptions } from '../src/themes/index';
+import { getObjectPropertyValue, setObjectPropertyValue } from '../src/helpers/objects';
+import { getExtensionConfiguration, promptToReload, getColorThemeJson, getThemeConfig } from '../src/helpers/index';
+import { green } from '../scripts/helpers/painter';
 
 /** Compare the workspace and the user configurations with the current setup of the theme. */
 export const detectConfigChanges = () => {

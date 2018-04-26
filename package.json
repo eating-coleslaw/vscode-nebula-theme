@@ -72,11 +72,11 @@
                     "default": "basic",
                     "description": "Does stuff",
                     "enum": [
-                        "none",
-                        "basic",
-                        "more",
-                        "operator",
-                        "no restraint"
+                        "0 - none",
+                        "1 - basic",
+                        "2 - wavy",
+                        "3 - curly",
+                        "4 - no restraint"
                     ]
                 },
                 "nebula-theme.materialize": {

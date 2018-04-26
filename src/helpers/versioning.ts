@@ -48,10 +48,3 @@ const updateExtensionVersionInMemento = async (state: vscode.Memento) => {
 const getCurrentExtensionVersion = (): string => {
     return vscode.extensions.getExtension('ChirtleLovesDolls.nebula-theme').packageJSON.version;
 };
-
-/**
- * Check if the current version of VS Code supports new features.
-*/
-export const checkVersionSupport = (supportedVersion: string): boolean => {
-    return !semver.lt(vscode.version, supportedVersion);
-};
