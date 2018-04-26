@@ -27,15 +27,9 @@ export const setConfig = (section: string, value: any, global: boolean = false) 
     return getConfig().update(section, value, global);
 };
 
+
 export const getThemeConfig = (section: string) => {
     return getConfig('nebula-theme').inspect(section);
-};
-
-/**
- * Is a folder opened?
- */
-export const hasWorkspace = (): boolean => {
-    return vscode.workspace.rootPath !== undefined;
 };
 
 /**
@@ -69,7 +63,7 @@ export const isThemeNotVisible = (): boolean => {
 export const getExtensionPath = () => path.join(__dirname, '..', '..', '..');
 
 /**
- * Get the configuration of the icons as JSON Object
+ * Get the configuration of the theme as JSON Object
  */
 export const getColorThemeJson = (): Promise<ThemeConfiguration> => {
     return new Promise((resolve, reject) => {

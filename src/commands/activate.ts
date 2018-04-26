@@ -1,15 +1,9 @@
 import * as vscode from 'vscode';
 import * as helpers from './../helpers';
-import * as versioning from './../helpers/versioning';
 import * as i18n from './../i18N';
-import * as outdatedMessage from './../messages/outdated';
 
 /** Activate the color theme by changing the settings for the colorTheme. */
 export const activateColorTheme = () => {
-    if (!versioning.checkVersionSupport('1.21.0')) {
-        outdatedMessage.showOutdatedMessage();
-        return Promise.reject('Outdated version of vscode!');
-    }
     return setColorTheme();
 };
 

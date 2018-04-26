@@ -1,5 +1,4 @@
 import * as helpers from './../helpers';
-import * as versioning from './../helpers/versioning';
 import * as vscode from 'vscode';
 import opn = require('opn');
 import * as i18n from './../i18N';
@@ -16,7 +15,7 @@ export const showUpdateMessage = () => {
         i18n.translate('themeUpdated'),
 
         // show 'Activate' button if icon theme is not active
-        (versioning.checkVersionSupport('1.10.0') && helpers.isThemeNotVisible())
+        helpers.isThemeNotVisible()
             ? i18n.translate('activate') : undefined,
 
         i18n.translate('readChangelog'),
