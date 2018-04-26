@@ -15,6 +15,7 @@ export const getTokenStyleDefinitions = (tokenColors: ITokenGroup[], config: The
 	return config;
 };
 
+
 const setItalicTokenDefinitions = (italicComments: boolean, italicsTheme: string) => {
 	let obj = { tokenColors: [] };
 	obj.tokenColors = [
@@ -27,6 +28,7 @@ const setItalicTokenDefinitions = (italicComments: boolean, italicsTheme: string
 
 	return merge({}, obj);
 };
+
 
 const getItalicScopeArray = (italicComments: boolean, italicsTheme: string): string[] => {
 	let array: string[] = [];
@@ -56,6 +58,7 @@ const getItalicScopeArray = (italicComments: boolean, italicsTheme: string): str
 		return array;
 	}
 
+	// Default to Basic Scopes italic theme
 	else {
 		array = [...array, ...basicScopes];
 		return array;

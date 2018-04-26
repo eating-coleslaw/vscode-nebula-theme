@@ -43,7 +43,7 @@ export const generateThemeConfigurationObject = (options: ThemeJsonOptions): The
 };
 
 /**
- * The options control the generator and decide which @TODO: finish description
+ * The options control the generator
  */
 export const getDefaultThemeOptions = (): ThemeJsonOptions => ({
     commentItalics: true,
