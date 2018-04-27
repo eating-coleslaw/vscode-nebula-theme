@@ -37,7 +37,7 @@
     "contributes": {
         "themes": [
             {
-                "id": "nebula-theme",
+                "id": "Nebula",
                 "label": "Nebula",
                 "uiTheme": "vs-dark",
                 "path": "./out/src/nebula-color-theme.json"

@@ -10,11 +10,11 @@ export const activateColorTheme = () => {
 /** Set the color theme in the config. */
 const setColorTheme = () => {
     // global user config
-    return helpers.getConfig().update('workbench.colorTheme', 'nebula-theme', true)
+    return helpers.getConfig().update('workbench.colorTheme', 'Nebula', true)
         .then(() => {
             // local workspace config
             if (helpers.getConfig().inspect('workbench.colorTheme').workspaceValue !== undefined) {
-                helpers.getConfig().update('workbench.colorTheme', 'nebula-theme');
+                helpers.getConfig().update('workbench.colorTheme', 'Nebula');
             }
             vscode.window.showInformationMessage(i18n.translate('activated'));
         });

@@ -44,8 +44,8 @@ export const setThemeConfig = (section: string, value: any, global: boolean = fa
  * @param{boolean} global false by default
  */
 export const isThemeActivated = (global: boolean = false): boolean => {
-    return global ? getConfig().inspect('workbench.colorTheme').globalValue === 'nebula-theme'
-        : getConfig().inspect('workbench.colorTheme').workspaceValue === 'nebula-theme';
+    return global ? getConfig().inspect('workbench.colorTheme').globalValue === 'Nebula'
+        : getConfig().inspect('workbench.colorTheme').workspaceValue === 'Nebula';
 };
 
 /**
