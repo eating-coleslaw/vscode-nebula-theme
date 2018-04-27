@@ -15,7 +15,7 @@
     "bugs": {
         "url": "https://github.com/eating-coleslaw/vscode-nebula-theme/issues"
     },
-    "icon": "images/icon.png",
+    "icon": "icon.png",
     "galleryBanner": {
         "color": "#27273A",
         "theme": "dark"
