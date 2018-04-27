@@ -10,17 +10,11 @@ export const showConfirmToReloadMessage = (): Promise<boolean> => {
 
         vscode.window.showInformationMessage(
             i18n.translate('confirmReload'),
-            i18n.translate('reload'),
-            i18n.translate('neverShowAgain')
+            i18n.translate('reload')
         ).then(value => {
             switch (value) {
                 case i18n.translate('reload'):
                     resolve(true);
-                    break;
-
-                case i18n.translate('neverShowAgain'):
-                    disableReloadMessage();
-                    resolve(false);
                     break;
 
                 default:
@@ -29,9 +23,4 @@ export const showConfirmToReloadMessage = (): Promise<boolean> => {
             }
         });
     });
-};
-
-/** Disable the reload message in the global settings */
-const disableReloadMessage = () => {
-    helpers.setThemeConfig('showReloadMessage', false, true);
 };

@@ -91,15 +91,3 @@ export const promptToReload = () => {
 const reloadWindow = () => {
     return vscode.commands.executeCommand('workbench.action.reloadWindow');
 };
-
-/**
- * Capitalize the first letter of a string
- */
-export const capitalizeFirstLetter = (name: string): string => name.charAt(0).toUpperCase() + name.slice(1);
-
-/**
- * TitleCase all words in a string
- */
-export const toTitleCase = (str) => {
-    return str.replace(/\w\S*/g, (txt) => { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
-};

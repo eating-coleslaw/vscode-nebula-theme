@@ -11,10 +11,8 @@ export const showWelcomeMessage = () => {
         i18n.translate('themeInstalled'),
 
         // show 'Activate' button if icon theme is not active
-        helpers.isThemeNotVisible()
-            ? i18n.translate('activate') : i18n.translate('howToActivate'),
-
-        i18n.translate('neverShowAgain')
+        helpers.isThemeNotVisible() ? i18n.translate('activate') : i18n.translate('howToActivate')
+        
     ).then(handleWelcomeMessageActions);
 };
 
@@ -26,19 +24,10 @@ const handleWelcomeMessageActions = (value) => {
             break;
 
         case i18n.translate('howToActivate'):
-            opn('https://code.visualstudio.com/blogs/2016/09/08/icon-themes#_file-icon-themes');
-            break;
-
-        case i18n.translate('neverShowAgain'):
-            disableWelcomeMessage();
+            opn('https://code.visualstudio.com/docs/getstarted/themes#_selecting-the-color-theme');
             break;
 
         default:
             break;
     }
-};
-
-/** Disable the welcome messages in the global settings */
-const disableWelcomeMessage = () => {
-    helpers.setThemeConfig('showWelcomeMessage', false, true);
 };

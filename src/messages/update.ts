@@ -9,8 +9,6 @@ export const showUpdateMessage = () => {
     // if the user does not want to see the update message
     if (helpers.getThemeConfig('showUpdateMessage').globalValue !== true) { return; }
 
-    //const config = helpers.getConfig().inspect('workbench.colorTheme');
-
     vscode.window.showInformationMessage(
         i18n.translate('themeUpdated'),
 
@@ -18,8 +16,7 @@ export const showUpdateMessage = () => {
         helpers.isThemeNotVisible()
             ? i18n.translate('activate') : undefined,
 
-        i18n.translate('readChangelog'),
-        i18n.translate('neverShowAgain')
+        i18n.translate('readChangelog')
     ).then(handleUpdateMessageActions);
 };
 
@@ -31,19 +28,10 @@ const handleUpdateMessageActions = (value) => {
             break;
 
         case i18n.translate('readChangelog'):
-            opn('https://marketplace.visualstudio.com/items/PKief.material-icon-theme/changelog');
-            break;
-
-        case i18n.translate('neverShowAgain'):
-            disableUpdateMessage();
+            opn('https://marketplace.visualstudio.com/items/ChirtleLovesDolls.nebula-theme/changelog');
             break;
 
         default:
             break;
     }
-};
-
-/** Disable the update messages in the global settings */
-const disableUpdateMessage = () => {
-    helpers.setThemeConfig('showUpdateMessage', false, true);
 };
