@@ -5,5 +5,6 @@ export interface Translation {
     activated?: string;
     themeUpdated?: string;
     readChangelog?: string;
+    confirmReload?: string;
     reload?: string;
 }

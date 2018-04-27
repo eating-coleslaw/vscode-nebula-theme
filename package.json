@@ -45,7 +45,7 @@
             {
                 "label": "Nebula - Console",
                 "uiTheme": "vs-dark",
-                "path": "./out/src/Nebula-color-theme-console.json"
+                "path": "./themes/Nebula-color-theme-console.json"
             }
         ],
         "commands": [
@@ -65,12 +65,12 @@
                 "nebula-theme.commentItalics": {
                     "type": "boolean",
                     "default": true,
-                    "description": "Does stuff"
+                    "description": "Controls whether code comments are italicized. Default value = true: italicized comments. This setting is not affected by the nebula-theme.themeItalics setting."
                 },
                 "nebula-theme.themeItalics": {
                     "type": "string",
-                    "default": "basic",
-                    "description": "Does stuff",
+                    "default": "2 - wavy",
+                    "description": "Controls the amount of non-comment code that gets italicized, where 0 - none has the least amount of italicized scopes and 4 - no restraint has the most italicized scopes. Accepted values are: 0 - none, 1 - basic, 2 - wavy, 3 - curly, and 4 - no restraint. 3 - curly is the intended Operator Mono setting. Default value = 2 - wavy.",
                     "enum": [
                         "0 - none",
                         "1 - basic",
@@ -82,7 +82,7 @@
                 "nebula-theme.materialize": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Does stuff"
+                    "description": "Controls whether workbench borders and other elements are hidden for a more material/flat appearance. Default value = false: visible workbench borders."
                 }
             }
         }

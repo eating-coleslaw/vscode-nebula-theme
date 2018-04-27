@@ -9,10 +9,13 @@ let currentTranslation;
 let fallbackTranslation; // default: en
 const PLACEHOLDER = '%';
 
-/** Initialize the translations */
+/**
+ * Initialize the translations
+ *  - Currently, messages are only available in English-US.
+ */
 export const initTranslations = async () => {
     try {
-        currentTranslation = await loadTranslation(getCurrentLanguage());
+        currentTranslation = await loadTranslation('en');
         fallbackTranslation = await loadTranslation('en');
     }
     catch (error) {
