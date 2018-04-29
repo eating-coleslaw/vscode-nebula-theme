@@ -2,11 +2,11 @@ import * as vscode from 'vscode';
 import * as i18n from './../i18N';
 
 /** User has to confirm if he wants to reload the editor */
-export const showConfirmToReloadMessage = (): Promise<boolean> => {
+export const showConfigUpdateMessages = (): Promise<boolean> => {
     return new Promise((resolve, reject) => {
 
         vscode.window.showInformationMessage(
-            i18n.translate('confirmReload'),
+            'Nebula has received some big changes. Restart VS Code to continue using the theme.',
             i18n.translate('reload')
         ).then(value => {
             switch (value) {

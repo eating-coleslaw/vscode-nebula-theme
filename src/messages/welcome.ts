@@ -12,7 +12,6 @@ export const showWelcomeMessage = () => {
 
         // show 'Activate' button if icon theme is not active
         helpers.isThemeNotVisible() ? i18n.translate('activate') : i18n.translate('howToActivate')
-        
     ).then(handleWelcomeMessageActions);
 };
 

@@ -28,7 +28,8 @@
         "color",
         "theme",
         "color-theme",
-        "dark"
+        "dark",
+        "configuration"
     ],
     "activationEvents": [
         "*"
