@@ -3,14 +3,40 @@
 
 ![Theme Preview](https://raw.githubusercontent.com/eating-coleslaw/vscode-nebula-theme/master/images/nebula_python_screenshot.PNG)
 
-## Activation
+## Configuration
 
-After installation or update, you can click the "Activate" button on the notification pop-up to immediately set Nebula as the workbench color theme.
+Instead of bundling together several Nebula theme variants, there's only one main theme file that's dynamically generated based on a few configuration settings. Customize the theme to suit your preferences without leaving VS Code!  
+
+### Comment Italics
+
+Toggle whether code comments are italicized using the `nebula-theme.commentItalics` setting.
+
+### Theme Italics
+
+Select the amount of italicized code you prefer, or disable code italics completely using the `nebula-theme.themeItalics` setting. Choose from five flavors:
+
+- `0 - None`
+- `1 - Basic`
+- `2 - Wavy`
+- `3 - Curly`
+- `4 - No Restraint`
+
+### Materialize
+
+For those that favor flat-style UIs, enable the `nebula-theme.materialize`. This will hide borders between workbench sections and a few other select elements.
+
+![Comment Italics: False, Theme Italics: 3 - Curly, Materialize: True](https://raw.githubusercontent.com/eating-coleslaw/vscode-nebula-theme/master/images/nebula_configured_python_screenshot.PNG)
+
+> Comment Italics: False | Theme Italics: 3 - Curly | Materialize: True
+
+## Issues
+
+ There's not much precedent for this style of theme configurability, so I expect a bumpy ride for these first few minor releases. If you notice any issues, particularly around the configuration options, updates, and activation, please leave write it up with reproduction steps on the github repo.
+
+ My primary concern after functional problems are accessibility-related concerns. If there's something I could update or add, don't hesitate to write up an issue on the github repo with your suggestion.
 
 ## Credits
 
 The configurability of this theme was made possibly thanks to Philipp Kief's generous licensing of the source code to his wonderful [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme). I highly recommend installing it alongside Nebula, using a folder color of `#CDF6FE`.
 
-#
-
- _Crafted with love, for you, by Chirtle_ 💕
+>_Crafted with love, for you, by Chirtle_ 💕
