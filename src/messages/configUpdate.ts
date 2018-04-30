@@ -26,7 +26,6 @@ export const showConfigUpdateMessages = (): Promise<boolean> => {
 					resolve(true);
 					break;
 
-
                 default:
                     resolve(false);
                     break;
