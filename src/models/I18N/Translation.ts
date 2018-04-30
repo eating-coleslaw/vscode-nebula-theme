@@ -7,4 +7,5 @@ export interface Translation {
     readChangelog?: string;
     confirmReload?: string;
     reload?: string;
+    reloadAndOpen?: string;
 }

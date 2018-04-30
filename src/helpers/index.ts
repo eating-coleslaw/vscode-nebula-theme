@@ -46,13 +46,7 @@ export const setThemeConfig = (section: string, value: any, global: boolean = fa
 export const isThemeActivated = (global: boolean = false): boolean => {
     let curVal = global ? getConfig().inspect('workbench.colorTheme').globalValue
                         : getConfig().inspect('workbench.colorTheme').workspaceValue;
-    console.log('is activated? ' + (curVal === 'nebula-theme' && curVal !== 'Nebula'));
-    return (curVal === 'Nebula'); //nebula-theme' && curVal !== 'Nebula');
-    //return (curVal === 'nebula-theme' && curVal !== 'Nebula');
-    /*
-    return global ? getConfig().inspect('workbench.colorTheme').globalValue === 'nebula-theme'
-        : getConfig().inspect('workbench.colorTheme').workspaceValue === 'nebula-theme';
-    */
+    return (curVal === 'Nebula');
 };
 
 /**
@@ -95,6 +89,6 @@ export const promptToReload = () => {
     });
 };
 
-const reloadWindow = () => {
+export const reloadWindow = () => {
     return vscode.commands.executeCommand('workbench.action.reloadWindow');
 };

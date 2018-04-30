@@ -5,7 +5,7 @@ import { lastNonConfigVer } from '../themes/index';
 
 export enum ThemeStatus {
     neverUsedBefore,
-    usingNonConfigurable,
+    firstConfigurable,
     updated,
     current
 }
@@ -19,15 +19,21 @@ export const checkThemeStatus = async (state: vscode.Memento) => {
         const packageVersion = getCurrentExtensionVersion();
         console.log('package state = ' + packageVersion);
         await state.update('nebula-theme.version', undefined);
+        //await state.update('nebula-theme.version', lastNonConfigVer);
 
         // check if the theme was used before
         if (stateVersion === undefined) {
             //return ThemeStatus.neverUsedBefore;
-            await updateExtensionVersionInMemento(state);
-            let stateVersion = state.get('nebula-theme.version'); 
+            //await updateExtensionVersionInMemento(state);
+            //let stateVersion = state.get('nebula-theme.version'); 
             console.log('state -> ' + stateVersion);
-            return semver.eq(stateVersion, lastNonConfigVer) ? ThemeStatus.usingNonConfigurable
-                    : (themeIsAlreadyActivated() ? ThemeStatus.updated : ThemeStatus.neverUsedBefore);
+            if (!themeIsAlreadyActivated()) {
+                return ThemeStatus.neverUsedBefore;
+            }
+            else if (semver.gt(packageVersion, lastNonConfigVer)) {
+                    return ThemeStatus.firstConfigurable;
+            }
+            else {return themeIsAlreadyActivated() ? ThemeStatus.updated : ThemeStatus.neverUsedBefore; }
         }
 
         // compare the version in the state with the package version

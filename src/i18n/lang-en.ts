@@ -8,5 +8,6 @@ export const translation: Translation = {
     'themeUpdated': 'Nebula Theme has been updated.',
     'readChangelog': 'Read changelog',
     'confirmReload': 'You have to reload VS Code to activate the changes to the theme.',
-    'reload': 'Reload'
+    'reload': 'Reload',
+    'reloadAndOpen': 'Reload & View Changes'
 };
