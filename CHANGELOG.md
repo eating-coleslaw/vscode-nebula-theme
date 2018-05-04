@@ -1,4 +1,5 @@
 # Change Log
+
 All notable changes to the "nebula-theme" extension will be documented in this file.
 
 ## [1.1.1]
