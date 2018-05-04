@@ -31,9 +31,9 @@ For those that favor flat-style UIs, enable the `nebula-theme.materialize`. This
 
 ## __Issues__
 
- There's not much precedent for this style of theme configurability, so I expect a bumpy ride for these first few minor releases. If you notice any issues, particularly around the configuration options, updates, and activation, please leave write it up with reproduction steps on the github repo. Please be nice, though; I learned typescript with this development 😅. 
+ There's not much precedent for this style of theme configurability, so I expect a bumpy ride for these first few minor releases. If you notice any issues, particularly around the configuration options, updates, and activation, please write it up with reproduction steps on the github repo. Please be nice, though; I learned typescript with this development 😅.
 
- My primary concern after functional problems are accessibility-related concerns. If there's something I could update or add, don't hesitate to write up an issue on the github repo with your suggestion.
+ My primary concern after functional problems is accessibility-related problems. If there's something I could update or add, don't hesitate to write up an issue on the github repo with your suggestion.
 
 ## __Credits__
 
