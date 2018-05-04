@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to the "nebula-theme" extension will be documented in this file.
 
+## [1.1.1]
+
+- Added `editorHint.foreground`: `#F2C88C`
+- Added `editorIndentGuide.activeBackground`: `#B2CFFB3A`
+
 ## [1.1.0]
 
 ### Added
