@@ -3,7 +3,7 @@ import { IWorkspaceColor } from "../models/index";
 export const workspaceColors: IWorkspaceColor[] = [
   { scope: "foreground", color: "#fcf6ff" },
   { scope: "errorForeground", color: "#E34F8C" },
-  { scope: "focusBorder", color: "#919CB9" },
+  { scope: "focusBorder", color: "#B2CFFB3A" },
   { scope: "descriptionForeground", color: "#919CB9" },
   { scope: "textLink.foreground", color: "#40afee" },
   { scope: "textLink.activeForeground", color: "#74D6E9" },
