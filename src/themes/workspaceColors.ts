@@ -54,7 +54,6 @@ export const workspaceColors: IWorkspaceColor[] = [
   { scope: "editor.findMatchHighlightBackground", color: "#C7ADFB30" },
   { scope: "editor.findRangeHighlightBackground", color: "#2A2A46" },
   { scope: "editor.findMatchHighlightBorder", color: "#C7ADFB50" },
-  { scope: "editorGroup.background", color: "#1F2330" },
   { scope: "editorGroupHeader.tabsBackground", color: "#1F2330" },
   { scope: "editorGroup.border", color: "#0F1320", materialize: true },
   { scope: "editorGroup.dropBackground", color: "#363C4C5f" },
