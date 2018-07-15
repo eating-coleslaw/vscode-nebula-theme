@@ -2,7 +2,7 @@
 
 All notable changes to the "nebula-theme" extension will be documented in this file.
 
-## **[1.2.0]** 2018-07-15
+## **[1.2.0]** - 2018-07-15
 ### Added
 - Error and warning colors to list text
 - Title bar foreground and border colors
