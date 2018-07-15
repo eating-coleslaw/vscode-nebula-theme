@@ -58,7 +58,6 @@ export const workspaceColors: IWorkspaceColor[] = [
   { scope: "editorGroup.border", color: "#0F1320", materialize: true },
   { scope: "editorGroup.dropBackground", color: "#363C4C5f" },
   { scope: "editorGroup.emptyBackground", color: "#1F2330" },
-  { scope: "editorGroup.background", color: "#1F2330" },
   { scope: "editorPane.background", color: "#1F2330" },
   { scope: "tab.activeBackground", color: "#27273A" },
   { scope: "tab.activeBorder", color: "#0000" },
