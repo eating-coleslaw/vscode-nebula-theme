@@ -13,7 +13,7 @@ export const workspaceColors: IWorkspaceColor[] = [
   { scope: "editorIndentGuide.background", color: "#B2CFFB1A" },
   { scope: "editorIndentGuide.activeBackground", color: "#B2CFFB3A" },
   { scope: "editorRuler.foreground", color: "#C7ADFB2f" },
-  { scope: "editorOverviewRuler.border", color: "#1F2330", materialize: true },
+  { scope: "editorOverviewRuler.border", color: "#B2CFFB2A", materialize: true },
   { scope: "progressBar.background", color: "#24E8D8" },
   { scope: "badge.foreground", color: "#f8f8f2" },
   { scope: "badge.background", color: "#E34F8C" },
