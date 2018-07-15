@@ -35,6 +35,7 @@ export const workspaceColors: IWorkspaceColor[] = [
   { scope: "titleBar.inactiveBackground", color: "#1F2330"},
   { scope: "titleBar.activeForeground", color: "#D7D6DF"},
   { scope: "titleBar.inactiveForeground", color: "#919CB9"},
+  { scope: "titleBar.border", color: "#0F1320", materialize: true },
   { scope: "extensionButton.prominentBackground", color: "#97EE91" },
   { scope: "extensionButton.prominentForeground", color: "#0F1320" },
   { scope: "extensionButton.prominentHoverBackground", color: "#AFFA90" },
