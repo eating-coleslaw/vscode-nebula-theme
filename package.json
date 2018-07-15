@@ -20,7 +20,7 @@
         "color": "#27273A",
         "theme": "dark"
     },
-    "license": "mit",
+    "license": "MIT",
     "categories": [
         "Themes"
     ],
@@ -108,12 +108,12 @@
     "devDependencies": {
         "@types/lodash.merge": "^4.6.3",
         "@types/mocha": "^2.2.42",
-        "@types/node": "^7.0.43",
+        "@types/node": "^7.0.67",
         "@types/opn": "^5.1.0",
         "rimraf": "^2.6.2",
-        "ts-node": "^6.0.0",
-        "tslint": "^5.8.0",
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6"
+        "ts-node": "^6.2.0",
+        "tslint": "^5.10.0",
+        "typescript": "^2.9.2",
+        "vscode": "^1.1.18"
     }
 }
