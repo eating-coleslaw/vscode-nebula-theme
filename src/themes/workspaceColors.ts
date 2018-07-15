@@ -19,7 +19,7 @@ export const workspaceColors: IWorkspaceColor[] = [
   { scope: "badge.background", color: "#E34F8C" },
   { scope: "button.background", color: "#E34F8C" },
   { scope: "button.hoverBackground", color: "#F661B1" },
-  { scope: "scrollbarSlider.background", color: "#06080E5A" },
+  { scope: "scrollbarSlider.background", color: "#06080E4A" },
   { scope: "scrollbarSlider.hoverBackground", color: "#0F132090" },
   { scope: "scrollbarSlider.activeBackground", color: "#0F1320C0" },
   { scope: "scrollbar.shadow", color: "#0F1320" },
