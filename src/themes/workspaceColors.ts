@@ -136,6 +136,8 @@ export const workspaceColors: IWorkspaceColor[] = [
   { scope: "list.hoverForeground", color: "#f6f0ffea" },
   { scope: "list.focusBackground", color: "#899BBF30" },
   { scope: "list.focusForeground", color: "#f6f0ff" },
+  { scope: "list.errorForeground", color: "#F36F98" },
+  { scope: "list.warningForeground", color: "#F2C88C" },
   { scope: "panel.background", color: "#1F2330" },
   { scope: "panel.border", color: "#0F1320", materialize: true },
   { scope: "panelTitle.inactiveForeground", color: "#919CB9" },
