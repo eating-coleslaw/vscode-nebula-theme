@@ -2,11 +2,17 @@
 
 All notable changes to the "nebula-theme" extension will be documented in this file.
 
+## **[1.2.1]** - 2018-07-17
+### Changed
+- Pick group labels are now legible
+  - For example, the "light themes" and "dark themes" text in the color theme selection menu
+
 ## **[1.2.0]** - 2018-07-15
 ### Added
 - Error and warning colors to list text
 - Title bar foreground and border colors
   - Title bar border will be hidden when the 'nebula-theme.materialize' setting is enabled
+  - These elements are visible when `window.titleBarStyle` is set to `custom`
 - Background colors for the new grid and centered layout features  
 
 ### Changed
