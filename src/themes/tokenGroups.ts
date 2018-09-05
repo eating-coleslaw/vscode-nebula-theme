@@ -123,7 +123,9 @@ export const tokenGroups: ITokenGroup[] = [
 			"keyword.type",
 			"storage.type",
 			"punctuation.accessor",
-			"punctuation.separator"
+			"punctuation.separator",
+			"meta.brace.square.js",
+			"meta.brace.square.ts"
 		],
 		settings: {
 			foreground: '#E7ADFB'
@@ -202,7 +204,6 @@ export const tokenGroups: ITokenGroup[] = [
 			"punctuation.section",
 			"punctuation.support",
 			"punctuation.terminator",
-			"meta.brace.square.js"
 		],
 		settings: {
 			foreground: '#FBD3E1'
