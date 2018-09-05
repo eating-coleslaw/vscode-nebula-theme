@@ -25,7 +25,7 @@ Select the amount of italicized code you prefer, or disable code italics complet
 
 For those that favor flat-style UIs, enable the `nebula-theme.materialize`. This will hide borders between workbench sections and a few other select elements.
 
-![Comment Italics: False, Theme Italics: 3 - Curly, Materialize: True](https://raw.githubusercontent.com/eating-coleslaw/vscode-nebula-theme/master/images/nebula_configured_python_screenshot.PNG)
+![Comment Italics: False, Theme Italics: 3 - Curly, Materialize: True](https://raw.githubusercontent.com/eating-coleslaw/vscode-nebula-theme/master/images/nebula-customized-socket-js-img.PNG)
 
 > Comment Italics: False | Theme Italics: 3 - Curly | Materialize: True
 
