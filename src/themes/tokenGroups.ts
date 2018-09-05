@@ -80,12 +80,12 @@ export const tokenGroups: ITokenGroup[] = [
 		},
 	},
 	{
-		name: 'Mischka',
+		name: 'Lavender Gray',
 		scope: [
 			"constant.other.database-name.sql"
 		],
 		settings: {
-			foreground: '#C0BADA'
+			foreground: '#C0B0D5'
 		}
 	},
 	{ 
