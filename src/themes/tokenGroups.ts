@@ -18,7 +18,8 @@ export const tokenGroups: ITokenGroup[] = [
 			"punctuation.support",
 			"punctuation.terminator",
 			"meta.structure.dictionary.json",
-			"string.quoted.double.json"
+			"string.quoted.double.json",
+			"constant.other.table-name.sql"
 		],
 		settings: {
 			foreground: '#F6F0FF'
@@ -31,7 +32,6 @@ export const tokenGroups: ITokenGroup[] = [
 			"variable",
 			"support.type.property-name",
 			"variable.other.object.property",
-			"constant.other.table-name.sql",
 			"meta.object-literal.key.js",
 			"string.other.link.description.markdown"
 		],
@@ -78,6 +78,15 @@ export const tokenGroups: ITokenGroup[] = [
 		settings: {
 			foreground: '#919CB9'
 		},
+	},
+	{
+		name: 'Mischka',
+		scope: [
+			"constant.other.database-name.sql"
+		],
+		settings: {
+			foreground: '#C0BADA'
+		}
 	},
 	{ 
 		name: 'Deluge',
@@ -193,8 +202,7 @@ export const tokenGroups: ITokenGroup[] = [
 			"punctuation.support",
 			"punctuation.terminator",
 			"meta.brace.square.js",
-			"variable.other.object",
-			"constant.other.database-name.sql"
+			"variable.other.object"
 		],
 		settings: {
 			foreground: '#FBD3E1'
