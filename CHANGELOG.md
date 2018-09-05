@@ -2,6 +2,26 @@
 
 All notable changes to the "nebula-theme" extension will be documented in this file.
 
+## **[1.3.0]** - 2018-09-04
+### Added
+
+- Styling for the new (VSC 1.26.0) workbench theme colors:
+  - Breadcrumbs & the breadcrump dropdown picker menu
+  - Menus, context menus, and the menubar (preview features)
+    - Enable by setting `window.titleBarStyle` to `custom` 
+  - New settings editor (preview feature)
+    - Try it out with the **Preferences: Open Settings (Preview)** command
+
+### Changed
+
+- Some punctuation elements are now more colorful (Mauve: `#E7ADFB`)
+  - Square braces in JS and TS
+  - Accessor periods (e.g. `object.property`)
+  - Punctuation separators (e.g. commas between parameters in a function call)
+- Object code elements have been de-emphasized (`#F6F0FF` -> `#C0B9DF`)
+  - This also affects T-SQL database names
+
+
 ## **[1.2.1]** - 2018-07-17
 ### Changed
 - Pick group labels are now legible
