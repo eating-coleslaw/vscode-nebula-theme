@@ -96,7 +96,7 @@ export const workspaceColors: IWorkspaceColor[] = [
   { scope: "tab.inactiveForeground", color: "#919CB9" },
   { scope: "breadcrumb.foreground", color: "#919CB9" },
   { scope: "breadcrumb.focusForeground", color: "#FCF6FF" },
-  { scope: "breadcrumb.activeSelectionBackground", color: "#899BBF3a" },
+  { scope: "breadcrumb.activeSelectionForeground", color: "#FCF6FF" },
   { scope: "breadcrumbPicker.background", color: "#27273A" },
   { scope: "terminal.background", color: "#27273A" },
   { scope: "terminalCursor.foreground", color: "#97EE91" },
