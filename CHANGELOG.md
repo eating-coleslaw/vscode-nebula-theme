@@ -2,7 +2,7 @@
 
 All notable changes to the "nebula-theme" extension will be documented in this file.
 
-## **[1.3.0]** - 2018-09-04
+## **[1.3.0]** - 2018-09-05
 ### Added
 
 - Styling for the new (VSC 1.26.0) workbench theme colors:
