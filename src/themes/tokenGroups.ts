@@ -14,7 +14,6 @@ export const tokenGroups: ITokenGroup[] = [
 			"punctuation.curlybrace",
 			"punctuation.fullstop",
 			"punctuation.section",
-			"punctuation.separator",
 			"punctuation.support",
 			"punctuation.terminator",
 			"meta.structure.dictionary.json",
@@ -82,10 +81,11 @@ export const tokenGroups: ITokenGroup[] = [
 	{
 		name: 'Lavender Gray',
 		scope: [
-			"constant.other.database-name.sql"
+			"constant.other.database-name.sql",
+			"variable.other.object"
 		],
 		settings: {
-			foreground: '#C0B9DF'
+			foreground: '#C5B9DF'
 		}
 	},
 	{ 
@@ -121,7 +121,9 @@ export const tokenGroups: ITokenGroup[] = [
 			"string.quoted.docstring",
 			"storage.type.function",
 			"keyword.type",
-			"storage.type"
+			"storage.type",
+			"punctuation.accessor",
+			"punctuation.separator"
 		],
 		settings: {
 			foreground: '#E7ADFB'
@@ -198,11 +200,9 @@ export const tokenGroups: ITokenGroup[] = [
 			"punctuation.other.comma",
 			"punctuation.other.period",
 			"punctuation.section",
-			"punctuation.separator",
 			"punctuation.support",
 			"punctuation.terminator",
-			"meta.brace.square.js",
-			"variable.other.object"
+			"meta.brace.square.js"
 		],
 		settings: {
 			foreground: '#FBD3E1'
