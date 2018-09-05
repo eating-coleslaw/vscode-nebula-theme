@@ -85,7 +85,7 @@ export const tokenGroups: ITokenGroup[] = [
 			"constant.other.database-name.sql"
 		],
 		settings: {
-			foreground: '#C0B0D5'
+			foreground: '#C0B5DA'
 		}
 	},
 	{ 
