@@ -2,6 +2,12 @@
 
 All notable changes to the "nebula-theme" extension will be documented in this file.
 
+## **[1.3.1]** - 2018-09-12
+### Added
+
+- Modified settings indicator color to match the badge background color
+
+
 ## **[1.3.0]** - 2018-09-05
 ### Added
 
