@@ -45,6 +45,7 @@ export const workspaceColors: IWorkspaceColor[] = [
   { scope: "menubar.selectionBackground", color: "#899BBF3A" },
   { scope: "menubar.selectionForeground", color: "#FCF6FF" },
   { scope: "menubar.selectionBorder", color: "#0F13200A", materialize: true },
+  { scope: "menu.separatorBackground", color: "#B2CFFB3A" },
   { scope: "settings.headerForeground", color: "#24E8D8" },
   { scope: "settings.modifiedItemForeground", color: "#E34F8C" },
   { scope: "settings.modifiedItemIndicator", color: "#E34F8C" },
