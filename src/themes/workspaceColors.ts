@@ -129,6 +129,7 @@ export const workspaceColors: IWorkspaceColor[] = [
   { scope: "terminal.ansiWhite", color: "#FBD3E1" },
   { scope: "activityBar.background", color: "#1F2330" },
   { scope: "activityBar.foreground", color: "#f6f0ff" },
+  { scope: "activityBar.inactiveForeground", color: "#919CB9" },
   { scope: "activityBar.border", color: "#0F1320", materialize: true },
   { scope: "activityBar.dropBackground", color: "#0F1320" },
   { scope: "activityBarBadge.background", color: "#E34F8C" },
@@ -222,5 +223,9 @@ export const workspaceColors: IWorkspaceColor[] = [
   { scope: "gitDecoration.untrackedResourceForeground", color: "#e7ADFBa0" },
   { scope: "gitDecoration.submoduleResourceForeground", color: "#C7ADFB5f" },
   { scope: "gitDecoration.conflictingResourceForeground", color: "#07ADFB" },
-  { scope: "gitDecoration.ignoredResourceForeground", color: "#919CB9af" }
+  { scope: "gitDecoration.ignoredResourceForeground", color: "#919CB9af" },
+  { scope: "editor.snippetTabstopHighlightBackground", color: "#1F2330" },
+  { scope: "editor.snippetTabstopHighlightBorder", color: "#24E8D890" },
+  { scope: "editor.snippetFinalTabstopHighlightBackground", color: "#1F2330" },
+  { scope: "editor.snippetFinalTabstopHighlightBorder", color: "#24E8D890" }
 ];
