@@ -2,6 +2,13 @@
 
 All notable changes to the "nebula-theme" extension will be documented in this file.
 
+## **[1.3.2]** - 2018-11-24
+## Added
+
+- Modified Tab Border colors. Enable via the Highlight Modified Tabs setting.
+- Foreground colors and darker background colors for Input Validation messages.
+- Snippet Tabstop border and background colors.
+
 ## **[1.3.1]** - 2018-09-12
 ### Added
 
