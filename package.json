@@ -105,7 +105,6 @@
         "semver": "^5.5.0"
     },
     "devDependencies": {
-        "@types/mocha": "^2.2.42",
         "@types/node": "^7.10.14",
         "@types/opn": "^5.1.0",
         "rimraf": "^2.6.2",
