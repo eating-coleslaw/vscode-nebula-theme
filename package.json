@@ -101,12 +101,10 @@
         "watch": "tsc -watch -p ./"
     },
     "dependencies": {
-        "lodash.merge": "^4.6.1",
         "opn": "^5.3.0",
         "semver": "^5.5.0"
     },
     "devDependencies": {
-        "@types/lodash.merge": "^4.6.3",
         "@types/mocha": "^2.2.42",
         "@types/node": "^7.10.14",
         "@types/opn": "^5.1.0",
