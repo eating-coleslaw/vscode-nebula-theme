@@ -1,4 +1,4 @@
-import { createThemeFile, getDefaultThemeOptions } from '../themes/index';
+import { createThemeFile } from '../themes/index';
 import { getObjectPropertyValue, setObjectPropertyValue } from './objects';
 import { getExtensionConfiguration, promptToReload, getColorThemeJson, getThemeConfig } from '.';
 import { green } from '../../scripts/helpers/painter';
@@ -33,21 +33,16 @@ const compareConfigs = (configs: string[]): Promise<{ [name: string]: any }> => 
     let updateRequired = false;
 
     return getColorThemeJson().then(json => {
-        const defaults = getDefaultThemeOptions();
-
         configs.forEach(configName => {
-
-            const configValue = getThemeConfig(configName).globalValue;
+            let configValue = getThemeConfig(configName).globalValue;
+            if (configValue === undefined) {
+                configValue = getThemeConfig(configName).defaultValue;
+            }
+            
             const currentState = getObjectPropertyValue(json.options, configName);
-            const configDefault = getObjectPropertyValue(defaults, configName);
 
             // If property is deleted, and it wasn't the default value, set it to the default value
-            if (configValue === undefined && currentState !== configDefault) {
-                setObjectPropertyValue(json.options, configName, configDefault);
-                updateRequired = true;
-            }
-
-            else if (configValue !== undefined && currentState !== configValue) {
+            if (JSON.stringify(configValue) !== JSON.stringify(currentState)) {
                 setObjectPropertyValue(json.options, configName, configValue);
                 updateRequired = true;
             }
