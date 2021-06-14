@@ -52,6 +52,6 @@ export const generateThemeConfigurationObject = (options: ThemeJsonOptions): The
  */
 export const getDefaultThemeOptions = (): ThemeJsonOptions => ({
     commentItalics: true,
-	themeItalics: ItalicsTheme.Basic,
+	themeItalics: ItalicsTheme.More,
 	materialize: false
 });
