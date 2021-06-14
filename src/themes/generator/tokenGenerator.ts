@@ -1,23 +1,19 @@
 import { ThemeConfiguration, ThemeJsonOptions, ITokenGroup, FontStyle, ItalicsTheme } from '../../models/index';
-import merge = require('lodash.merge');
 import { commentScope, basicScopes, moreScopes, operatorScopes, noRestraintScopes } from '../TokenGroups/index';
 
 
 export const getTokenStyleDefinitions = (tokenColors: ITokenGroup[], config: ThemeConfiguration, options: ThemeJsonOptions): ThemeConfiguration => {
-	config = merge({}, config);
+	const italicTokenDefinitions = setItalicTokenDefinitions(options.commentItalics, options.themeItalics);
 
-	const tokenDefinitions = setItalicTokenDefinitions(options.commentItalics, options.themeItalics);
-
-	config = merge({}, config, tokenDefinitions);
-
-	config.tokenColors = [...config.tokenColors, ...tokenColors];
-
+	config.tokenColors = [...tokenColors, ...italicTokenDefinitions.tokenColors];
+	
 	return config;
 };
 
 
 const setItalicTokenDefinitions = (italicComments: boolean, italicsTheme: string) => {
 	let obj = { tokenColors: [] };
+
 	obj.tokenColors = [
 		{
 			name: 'Compiled Italics',
@@ -26,7 +22,7 @@ const setItalicTokenDefinitions = (italicComments: boolean, italicsTheme: string
 		}
 	];
 
-	return merge({}, obj);
+	return obj;
 };
 
 

@@ -2,7 +2,6 @@ import { workspaceColors } from '../workspaceColors';
 import { tokenGroups } from '../tokenGroups';
 import { getWorkspaceColorDefinitions } from './workspaceColorGenerator';
 import { themeJsonName } from './constants';
-import merge = require('lodash.merge');
 import { ThemeJsonOptions, ThemeConfiguration, ItalicsTheme } from '../../models';
 import * as path from 'path';
 import * as fs from 'fs';
@@ -13,7 +12,7 @@ import { getTokenStyleDefinitions } from './tokenGenerator';
  */
 export const createThemeFile = (jsonOptions?: ThemeJsonOptions): Promise<string> => {
     // override the default options with the new options
-    const options = merge({}, getDefaultThemeOptions(), jsonOptions);
+    const options = {...getDefaultThemeOptions(), ...jsonOptions};
 
     const themeJsonPath = path.join(__dirname, '../../../', 'src', themeJsonName);
 
@@ -35,11 +34,15 @@ export const createThemeFile = (jsonOptions?: ThemeJsonOptions): Promise<string>
  */
 export const generateThemeConfigurationObject = (options: ThemeJsonOptions): ThemeConfiguration => {
     
-    const themeConfig = merge({}, new ThemeConfiguration(), { options });
-    const workspaceColorDefinitions = getWorkspaceColorDefinitions(workspaceColors, themeConfig, options);
-    const tokenColorDefinitions = getTokenStyleDefinitions(tokenGroups, themeConfig, options);
+    const themeConfig = {...new ThemeConfiguration(), ...options};
 
-    return merge({}, workspaceColorDefinitions, tokenColorDefinitions);
+    const workspaceColorsConfig = getWorkspaceColorDefinitions(workspaceColors, themeConfig, options);
+    themeConfig.colors = workspaceColorsConfig.colors;
+
+    const tokenColorsConfig = getTokenStyleDefinitions(tokenGroups, themeConfig, options);
+    themeConfig.tokenColors = tokenColorsConfig.tokenColors;
+
+    return themeConfig;
 };
 
 /**

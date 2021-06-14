@@ -1,23 +1,23 @@
 import { IWorkspaceColor, ThemeConfiguration, ThemeJsonOptions } from '../../models/index';
-import merge = require('lodash.merge');
 
 export const getWorkspaceColorDefinitions = (wsColors: IWorkspaceColor[], config: ThemeConfiguration, options: ThemeJsonOptions): ThemeConfiguration => {
-	config = merge({}, config);
+	let colors = {};
 
 	wsColors.forEach(wsColor => {
 		let setColor: string;
-		if (options.materialize) { setColor = wsColor.materialize ? NamedColor.Transparent : wsColor.color; }
-		else { setColor = wsColor.color; }
-		config = merge({}, config, setColorDefinition(wsColor.scope, setColor));
+
+		if (options.materialize) {
+			setColor = wsColor.materialize ? NamedColor.Transparent : wsColor.color;
+		} else {
+			setColor = wsColor.color;
+		}
+
+		colors[wsColor.scope] = setColor;
 	});
 
-	return config;
-};
+	config.colors = colors;
 
-const setColorDefinition = (wsScope: string, color: string = NamedColor.Transparent) => {
-	const obj = { colors: {} };
-	obj.colors[`${wsScope}`] = `${color}`;
-	return obj;
+	return config;
 };
 
 const enum NamedColor {
