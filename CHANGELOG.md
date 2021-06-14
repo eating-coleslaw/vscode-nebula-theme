@@ -2,6 +2,11 @@
 
 All notable changes to the "nebula-theme" extension will be documented in this file.
 
+## **[1.3.3]** - 2021-06-14
+## Changed
+
+- Fixed the diff editor changed line background colors. Removed lines are now red, and new lines are now green. ([#6](https://github.com/eating-coleslaw/vscode-nebula-theme/issues/6))
+
 ## **[1.3.2]** - 2018-11-24
 ## Added
 
@@ -13,7 +18,6 @@ All notable changes to the "nebula-theme" extension will be documented in this f
 ### Added
 
 - Modified settings indicator color to match the badge background color
-
 
 ## **[1.3.0]** - 2018-09-05
 ### Added
@@ -33,7 +37,6 @@ All notable changes to the "nebula-theme" extension will be documented in this f
   - Punctuation separators (e.g. commas between parameters in a function call)
 - Object code elements have been de-emphasized (`#F6F0FF` -> `#C0B9DF`)
   - This also affects T-SQL database names
-
 
 ## **[1.2.1]** - 2018-07-17
 ### Changed
